@@ -1,0 +1,3051 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+img,
+video,
+iframe,
+embed,
+object {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+table {
+  max-width: 100%;
+}
+
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.page-loader {
+  position: fixed;
+  z-index: 10000;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: #fff;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 350ms ease, visibility 350ms ease;
+}
+
+.page-loader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.page-loader__spinner {
+  width: 54px;
+  height: 54px;
+  border: 4px solid rgba(27, 117, 188, 0.16);
+  border-top-color: #1b75bc;
+  border-right-color: #f7941d;
+  border-radius: 50%;
+  animation: page-loader-spin 800ms linear infinite;
+}
+
+.page-loader__label {
+  color: #21438b;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+@keyframes page-loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.u-body #carousel-0900 {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.u-body #carousel-0900 .u-carousel-indicators {
+  display: none !important;
+}
+
+.u-body #carousel-0900 .u-carousel-inner {
+  touch-action: pan-y;
+}
+
+.u-body #carousel-0900 .u-carousel-inner,
+.u-body #carousel-0900 .u-carousel-item {
+  height: min(78vh, 760px);
+  min-height: 600px;
+  border-radius: inherit;
+}
+
+.u-body #carousel-0900 .u-carousel-item {
+  background-position: center center;
+  background-size: cover;
+}
+
+.u-body #carousel-0900 .u-carousel-control {
+  width: 56px;
+  height: 56px;
+}
+
+.u-body #carousel-0900 .u-carousel-control svg {
+  width: 56px;
+  height: 56px;
+}
+
+.u-body #carousel-0900 .u-sheet-1 {
+  display: flex;
+  height: 100%;
+  min-height: 0;
+  align-items: flex-end;
+  padding: 24px 0;
+}
+
+.u-body #carousel-0900 .u-group-1 {
+  width: min(633px, 70%);
+  min-height: 0;
+  height: auto;
+  margin: 0;
+}
+
+.u-body #carousel-0900 .u-container-layout-1 {
+  padding: 34px;
+}
+
+.u-body #carousel-0900 .u-text-1 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.u-body #carousel-0900 .u-text-2 {
+  margin-top: 16px;
+  line-height: 1.5;
+}
+
+.u-body #carousel-0900 .u-shape-1 {
+  display: none;
+}
+
+.u-body #carousel-0900 .u-btn-1 {
+  margin: 16px 0 0;
+}
+
+@media (max-width: 1199px) {
+  .u-body .u-section-1 {
+    min-height: 0 !important;
+  }
+
+  .u-body .u-section-1 > .u-image-1 {
+    width: calc(100% - 40px) !important;
+    min-height: clamp(300px, 44vw, 460px);
+    height: auto !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    border-radius: 22px;
+    background-position: center;
+  }
+
+  .u-body #carousel-0900 {
+    width: 100% !important;
+    max-width: none;
+    margin: 0;
+  }
+
+  .u-body #carousel-0900 .u-carousel-inner,
+  .u-body #carousel-0900 .u-carousel-item {
+    height: min(76vh, 700px);
+    min-height: 540px;
+  }
+
+  .u-header .u-sheet-1 {
+    position: relative;
+    width: calc(100% - 40px) !important;
+    height: 76px;
+    min-height: 76px !important;
+    margin-inline: auto;
+  }
+
+  .u-header .u-image-1 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 96px;
+    height: auto;
+    max-height: 58px;
+    margin: 0 !important;
+    transform: translateY(-50%);
+  }
+
+  .u-header .u-menu-1 {
+    position: absolute !important;
+    top: 16px;
+    right: 0;
+    --sidenav-width: min(320px, 86vw);
+    width: 44px !important;
+    height: 44px;
+    margin: 0 !important;
+  }
+
+  .u-header .u-menu-1.open .u-nav-container-collapse {
+    width: 100vw !important;
+    height: 100vh;
+    height: 100dvh;
+    overflow: visible;
+  }
+
+  .u-header .u-menu-1.open .u-sidenav {
+    position: fixed !important;
+    z-index: 2;
+    top: 12px !important;
+    bottom: 12px !important;
+    left: 12px !important;
+    width: min(320px, calc(100vw - 24px)) !important;
+    max-width: calc(100vw - 24px) !important;
+    height: calc(100vh - 24px) !important;
+    height: calc(100dvh - 24px) !important;
+    flex: none !important;
+    margin: 0 !important;
+    border-radius: 18px;
+    transition: none !important;
+    overflow-y: auto;
+    background: #fff !important;
+    color: #17324b;
+    box-shadow: 12px 0 32px rgba(13, 36, 58, 0.14);
+  }
+
+  .u-header .u-menu-1.open .u-sidenav:before {
+    background: #fff !important;
+    opacity: 1 !important;
+    border-radius: 18px;
+  }
+
+  .u-header .u-menu-1.open .u-menu-overlay {
+    position: fixed !important;
+    z-index: 1;
+    inset: 0 !important;
+    display: block !important;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    background: rgba(18, 38, 58, 0.45) !important;
+    opacity: 1 !important;
+  }
+
+  .u-header .u-menu-1.open .u-popupmenu-items {
+    width: 100%;
+    text-align: left;
+  }
+
+  .u-header .u-menu-1.open .u-sidenav .u-nav-link {
+    padding: 13px 20px !important;
+    color: #334f68 !important;
+    white-space: normal;
+  }
+
+  .u-header .u-menu-1.open .u-menu-close {
+    color: #17324b;
+    cursor: pointer;
+  }
+
+  body.menu-overlay {
+    overflow: hidden;
+  }
+
+  .u-header .menu-collapse {
+    display: block !important;
+    width: 44px;
+    height: 44px;
+  }
+
+  .u-header .u-nav-container {
+    display: none !important;
+  }
+
+  .u-header .u-nav-container-collapse {
+    display: flex;
+  }
+
+  .u-header .u-hamburger-link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    border: 1px solid rgba(30, 78, 118, 0.18);
+    border-radius: 12px;
+    background: #fff;
+  }
+
+  .u-header .u-hamburger-link svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-footer .u-text-12 {
+    display: block;
+    width: 100% !important;
+    max-width: 100%;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+  }
+}
+
+body:has(#carousel-0900) #block-8 {
+  background-color: #f4f6f8 !important;
+  background-image: none !important;
+}
+
+body:has(#carousel-0900) #block-8 .u-text-1 {
+  color: #21438b !important;
+}
+
+body:has(#carousel-0900) #block-9 .u-group-1 {
+  background-image: linear-gradient(135deg, #f8fafc, #edf2f6) !important;
+}
+
+body:has(#carousel-0900) #block-9 .u-text-1 {
+  color: #21438b !important;
+}
+
+body:has(#carousel-0900) #block-18 {
+  background-image: linear-gradient(to right, rgba(25, 38, 51, 0.38), rgba(25, 38, 51, 0.2)), url('../images/Gemini_Generated_Image_qrvtixqrvtixqrvt-Photoroom.png') !important;
+}
+
+@media (max-width: 991px) {
+  body:has(#carousel-0900) .u-section-11 .u-sheet-1 {
+    min-height: 0 !important;
+    padding-top: 28px;
+    padding-bottom: 20px;
+  }
+
+  body:has(#carousel-0900) .u-section-11 .u-text-1 {
+    margin: 0 auto !important;
+    font-size: clamp(1.4rem, 6vw, 1.8rem);
+    line-height: 1.25;
+  }
+
+  body:has(#carousel-0900) .u-section-11 .u-layout-wrap-1 {
+    width: 100% !important;
+    margin: 22px 0 0 !important;
+  }
+
+  body:has(#carousel-0900) .u-section-11 .u-layout,
+  body:has(#carousel-0900) .u-section-11 .u-layout-row {
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  body:has(#carousel-0900) .u-section-11 .u-layout-row:has(.partners-carousel__track) {
+    display: block !important;
+    overflow: hidden;
+  }
+
+  .partners-carousel__track {
+    display: flex;
+    width: 100%;
+    transition: transform 450ms cubic-bezier(0.2, 0.7, 0.2, 1);
+    will-change: transform;
+  }
+
+  .partners-carousel__slide {
+    display: grid;
+    flex: 0 0 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    min-width: 0;
+  }
+
+  .partners-carousel__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 14px;
+  }
+
+  .partners-carousel__button {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid rgba(33, 67, 139, 0.22);
+    border-radius: 50%;
+    background: #fff;
+    color: #21438b;
+    font: inherit;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .partners-carousel__button:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+
+  .partners-carousel__position {
+    min-width: 34px;
+    color: #526579;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  body:has(#carousel-0900) .u-section-11 .u-layout-cell-1,
+  body:has(#carousel-0900) .u-section-11 .u-layout-cell-2,
+  body:has(#carousel-0900) .u-section-11 .u-layout-cell-3,
+  body:has(#carousel-0900) .u-section-11 .u-layout-cell-4 {
+    width: 100% !important;
+    min-width: 0;
+    min-height: 96px !important;
+  }
+
+  body:has(#carousel-0900) .u-section-11 .u-container-layout-1,
+  body:has(#carousel-0900) .u-section-11 .u-container-layout-2,
+  body:has(#carousel-0900) .u-section-11 .u-container-layout-3,
+  body:has(#carousel-0900) .u-section-11 .u-container-layout-4 {
+    display: flex;
+    min-height: 96px;
+    align-items: center;
+    justify-content: center;
+    padding: 12px !important;
+  }
+
+  body:has(#carousel-0900) .u-section-11 .u-image-1,
+  body:has(#carousel-0900) .u-section-11 .u-image-2,
+  body:has(#carousel-0900) .u-section-11 .u-image-3,
+  body:has(#carousel-0900) .u-section-11 .u-image-4 {
+    display: block;
+    width: 100% !important;
+    max-width: 150px;
+    height: 58px !important;
+    margin: 0 auto !important;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 992px) {
+  .partners-carousel__track,
+  .partners-carousel__slide {
+    display: contents;
+  }
+
+  .partners-carousel__controls {
+    display: none;
+  }
+}
+
+.u-section-9.promo-carousel-ready .u-sheet-1 {
+  min-height: 0 !important;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.promo-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(240px, 2fr);
+  align-items: center;
+  gap: 32px;
+}
+
+.promo-carousel {
+  min-width: 0;
+}
+
+.promo-carousel__viewport {
+  overflow: hidden;
+  border-radius: 20px;
+  touch-action: pan-y;
+  cursor: grab;
+  user-select: none;
+}
+
+.promo-carousel__viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.promo-carousel__track {
+  display: flex;
+  width: calc(var(--slide-count) * 100%);
+  transition: transform 450ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  will-change: transform;
+}
+
+.promo-carousel__card {
+  box-sizing: border-box;
+  flex: 0 0 calc(100% / var(--slide-count));
+  width: calc(100% / var(--slide-count)) !important;
+  min-width: 0;
+  min-height: 0 !important;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #478ac9;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.promo-carousel__card .u-container-layout {
+  padding: 14px !important;
+}
+
+.promo-carousel__card img {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  margin: 0;
+  object-fit: contain;
+  -webkit-user-drag: none;
+}
+
+.promo-carousel__card h5 {
+  margin: 14px 0 0;
+}
+
+.promo-carousel__card p {
+  margin: 8px 0 0;
+}
+
+.promo-carousel__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 14px;
+}
+
+.promo-carousel__button {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid rgba(33, 67, 139, 0.22);
+  border-radius: 50%;
+  background: #fff;
+  color: #21438b;
+  font: inherit;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.promo-carousel__position {
+  min-width: 34px;
+  color: #526579;
+  font-size: 13px;
+  text-align: center;
+}
+
+.promo-copy {
+  min-width: 0;
+}
+
+.promo-copy .u-text-9 {
+  margin: 0;
+}
+
+.promo-copy .u-text-10 {
+  margin: 18px 0 0;
+}
+
+@media (max-width: 767px) {
+  .u-section-9.promo-carousel-ready .u-sheet-1 {
+    padding: 28px 16px;
+  }
+
+  .promo-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-sheet {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  body:has(#carousel-0900) .u-section-4 {
+    min-height: 0 !important;
+    background-position: center, center !important;
+    background-size: cover, cover !important;
+  }
+
+  body:has(#carousel-0900) .u-section-4 .u-sheet-1 {
+    display: flex;
+    min-height: 0 !important;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 32px 0;
+    box-sizing: border-box;
+  }
+
+  body:has(#carousel-0900) .u-section-4 .u-text-1,
+  body:has(#carousel-0900) .u-section-4 .u-text-2 {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 0 !important;
+    text-align: center;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body:has(#carousel-0900) .u-section-4 .u-text-1 {
+    font-size: clamp(1.4rem, 6vw, 1.8rem);
+    line-height: 1.25;
+  }
+
+  body:has(#carousel-0900) .u-section-4 .u-text-2 {
+    margin-top: 8px !important;
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
+    line-height: 1.4;
+  }
+
+  body:has(#carousel-0900) .u-section-4 .u-shape-1 {
+    display: none;
+  }
+
+  body:has(#carousel-0900) .u-section-4 .u-group-1 {
+    width: min(364px, 100%);
+    min-height: 126px;
+    margin: 24px auto 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body:has(#carousel-0900) .u-section-4 .u-container-layout-1 {
+    display: flex;
+    flex-direction: row !important;
+    min-height: 126px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px !important;
+    box-sizing: border-box;
+    visibility: visible !important;
+  }
+
+  body:has(#carousel-0900) .u-section-4 .u-text-3,
+  body:has(#carousel-0900) .u-section-4 .u-text-4,
+  body:has(#carousel-0900) .u-section-4 .u-text-5 {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0 !important;
+    line-height: 1;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body:has(#carousel-0900) .u-section-4 .u-text-3 {
+    font-size: clamp(3rem, 14vw, 4rem);
+  }
+
+  body:has(#carousel-0900) .u-section-4 .u-text-4,
+  body:has(#carousel-0900) .u-section-4 .u-text-5 {
+    font-size: clamp(1.25rem, 6vw, 1.6rem);
+  }
+
+  body:has(#carousel-0900) .u-section-6 {
+    min-height: 0 !important;
+    background-position: center, center bottom !important;
+    background-size: cover, auto 100% !important;
+  }
+
+  body:has(#carousel-0900) .u-section-6 .u-sheet-1 {
+    display: flex;
+    min-height: 280px !important;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 0 24px;
+    box-sizing: border-box;
+  }
+
+  body:has(#carousel-0900) .u-section-6 .u-text-1 {
+    width: 100%;
+    margin: 0 !important;
+    font-size: clamp(1.5rem, 6vw, 1.9rem);
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  body:has(#carousel-0900) .u-section-6 .u-group-elements-1 {
+    width: 190px;
+    min-height: 52px;
+    margin: 26px auto 0 !important;
+  }
+
+  body:has(#carousel-0900) .u-section-6 .u-shape-1 {
+    width: 180px;
+    height: 48px;
+    margin: 4px auto 0 !important;
+  }
+
+  body:has(#carousel-0900) .u-section-6 .u-btn-1 {
+    display: flex;
+    width: 180px;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    margin: -52px auto 0 !important;
+    padding: 12px 20px;
+    box-sizing: border-box;
+  }
+
+  body:has(#carousel-0900) .u-section-10 {
+    display: flex;
+    min-height: 0 !important;
+    flex-direction: column;
+    padding: 24px 0 20px;
+    background-position: center, center !important;
+    background-size: cover, cover !important;
+    box-sizing: border-box;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-text-10 {
+    position: static;
+    order: 0;
+    width: auto;
+    height: auto;
+    margin: 0 18px 12px !important;
+    color: #fff !important;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    text-align: center;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-slider-1 {
+    order: 1;
+    width: calc(100% - 32px) !important;
+    max-width: 520px;
+    height: 430px !important;
+    min-height: 430px !important;
+    margin: 0 auto !important;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(24, 42, 60, 0.12);
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-container-layout-1,
+  body:has(#carousel-0900) .u-section-10 .u-container-layout-2,
+  body:has(#carousel-0900) .u-section-10 .u-container-layout-3 {
+    height: 100%;
+    padding: 24px 30px 48px !important;
+    box-sizing: border-box;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-image-1,
+  body:has(#carousel-0900) .u-section-10 .u-image-2,
+  body:has(#carousel-0900) .u-section-10 .u-image-3 {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto !important;
+    border-radius: 50%;
+    background-position: center top;
+    background-size: cover;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-text-1,
+  body:has(#carousel-0900) .u-section-10 .u-text-4,
+  body:has(#carousel-0900) .u-section-10 .u-text-7 {
+    width: auto;
+    margin: 16px 0 0 !important;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-text-2,
+  body:has(#carousel-0900) .u-section-10 .u-text-5,
+  body:has(#carousel-0900) .u-section-10 .u-text-8 {
+    width: auto;
+    margin: 16px auto 0 !important;
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-text-3,
+  body:has(#carousel-0900) .u-section-10 .u-text-6,
+  body:has(#carousel-0900) .u-section-10 .u-text-9 {
+    width: auto;
+    margin: 6px auto 0 !important;
+    font-size: 0.875rem;
+    line-height: 1.3;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-carousel-control-1,
+  body:has(#carousel-0900) .u-section-10 .u-carousel-control-2 {
+    z-index: 2;
+    width: 38px;
+    height: 38px;
+    top: auto !important;
+    bottom: 10px !important;
+    transform: none !important;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    color: #21438b;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-carousel-control-1 {
+    left: 10px;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-carousel-control-2 {
+    right: 10px;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-carousel-indicators-1 {
+    z-index: 2;
+    bottom: 25px !important;
+  }
+
+  body:has(#carousel-0900) .u-section-5 {
+    min-height: 0;
+  }
+
+  body:has(#carousel-0900) .u-section-5 .u-group-1 {
+    height: auto;
+    min-height: 0;
+    padding: 0 0 12px;
+    box-sizing: border-box;
+  }
+
+  body:has(#carousel-0900) .u-section-5 .u-text-1 {
+    margin: 28px 16px 0;
+    font-size: clamp(1.35rem, 6vw, 1.7rem);
+    line-height: 1.25;
+  }
+
+  body:has(#carousel-0900) .u-section-5 .u-layout-wrap-1 {
+    width: 100% !important;
+    max-width: 100%;
+    margin: 24px auto 0 !important;
+  }
+
+  body:has(#carousel-0900) .u-section-5 .u-layout-cell-1,
+  body:has(#carousel-0900) .u-section-5 .u-layout-cell-2 {
+    width: 100%;
+    min-height: 0 !important;
+  }
+
+  body:has(#carousel-0900) .u-section-5 .u-container-layout-2,
+  body:has(#carousel-0900) .u-section-5 .u-container-layout-3 {
+    height: auto;
+    min-height: 0;
+    padding: 16px 14px !important;
+    text-align: center;
+  }
+
+  body:has(#carousel-0900) .u-section-5 .u-image-1,
+  body:has(#carousel-0900) .u-section-5 .u-image-2 {
+    display: block;
+    width: 80px !important;
+    height: auto !important;
+    margin: 0 auto 10px !important;
+  }
+
+  body:has(#carousel-0900) .u-section-5 .u-text-2,
+  body:has(#carousel-0900) .u-section-5 .u-text-3 {
+    margin: 0 !important;
+    font-size: 1.2rem;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  .u-footer .u-layout-wrap-1 {
+    margin-top: 40px !important;
+  }
+
+  .u-footer .u-group-1 {
+    width: min(260px, 100%) !important;
+    min-height: 72px;
+    margin: 24px auto 0 !important;
+  }
+
+  .u-footer .u-container-layout-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 72px;
+    padding: 12px 16px !important;
+    box-sizing: border-box;
+  }
+
+  .u-footer .u-group-elements-1 {
+    display: flex;
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+  }
+
+  .u-footer .u-group-elements-1 .u-image-2 {
+    display: block;
+    width: 34px !important;
+    height: 28px !important;
+    margin: 0 !important;
+    object-fit: contain;
+  }
+
+  .u-footer .u-text-1 {
+    display: block;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.35;
+    text-align: left;
+  }
+
+  .u-footer .u-layout-cell-3 {
+    min-height: 0 !important;
+  }
+
+  .u-footer .u-layout-cell-3 .u-container-layout-10 {
+    height: auto;
+    min-height: 0;
+  }
+
+  .u-footer .u-layout-cell-4 {
+    min-height: 0 !important;
+  }
+
+  .u-footer .u-container-layout-14 {
+    height: auto;
+    min-height: 0;
+    padding: 0 0 14px;
+  }
+
+  .u-footer .u-list-2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 8px 0 0 !important;
+  }
+
+  .u-footer .u-list-2 .u-repeater {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 6px;
+    width: 100%;
+  }
+
+  .u-footer .u-list-2 .u-list-item {
+    width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .u-footer .u-list-2 .u-container-layout {
+    display: grid !important;
+    grid-template-columns: 28px minmax(0, 1fr);
+    align-items: start;
+    gap: 12px;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 8px 0 !important;
+  }
+
+  .u-footer .u-list-2 .u-icon {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0 !important;
+  }
+
+  .u-footer .u-list-2 .u-text {
+    grid-column: 2;
+    width: auto !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    font-size: 12px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+
+  .u-footer .u-shape-1 {
+    margin: 20px 0 16px !important;
+  }
+
+  .u-footer .u-text-13 {
+    width: 100% !important;
+    max-width: 100%;
+    margin: 0 !important;
+    padding: 0 12px;
+    box-sizing: border-box;
+    font-size: 12px;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+  }
+
+  .u-footer .u-group-2 {
+    height: auto;
+    min-height: 0;
+    margin: 14px 0 0 !important;
+  }
+
+  .u-footer .u-container-layout-15 {
+    padding: 12px 10px;
+  }
+
+  .u-footer .u-text-14 {
+    margin: 4px 0 0;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .u-text {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .floating-wa {
+    right: 16px !important;
+    bottom: 16px !important;
+  }
+
+  .floating-wa:hover {
+    width: 64px;
+  }
+
+  .floating-wa .wa-text {
+    display: none !important;
+  }
+
+  .u-body #carousel-0900 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0;
+  }
+
+  .u-body #carousel-0900 .u-carousel-inner,
+  .u-body #carousel-0900 .u-carousel-item {
+    height: clamp(440px, 125vw, 520px);
+    min-height: 0;
+  }
+
+  .u-body #carousel-0900 .u-carousel-item {
+    background-position: center;
+    background-size: cover;
+  }
+
+  .u-body #carousel-0900 .u-sheet-1 {
+    display: flex;
+    height: 100%;
+    min-height: 0;
+    align-items: flex-end;
+    padding: 16px 0;
+  }
+
+  .u-body #carousel-0900 .u-group-1 {
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    margin: 0;
+    border-radius: 16px;
+  }
+
+  .u-body #carousel-0900 .u-container-layout-1 {
+    padding: 20px;
+  }
+
+  .u-body #carousel-0900 .u-text-1 {
+    margin: 0;
+    font-size: clamp(1.7rem, 8vw, 2.25rem);
+    line-height: 1.2;
+  }
+
+  .u-body #carousel-0900 .u-text-2 {
+    margin-top: 12px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .u-body #carousel-0900 .u-shape-1 {
+    display: none;
+  }
+
+  .u-body #carousel-0900 .u-btn-1 {
+    margin: 14px 0 0;
+    padding: 12px 20px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .u-body #carousel-0900 .u-carousel-control {
+    display: flex !important;
+    top: 50%;
+    bottom: auto;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: #fff;
+    box-shadow: none;
+  }
+
+  .u-body #carousel-0900 .u-carousel-control-prev {
+    left: 12px;
+  }
+
+  .u-body #carousel-0900 .u-carousel-control-next {
+    right: 12px;
+  }
+
+  .u-body #carousel-0900 .u-carousel-control > span {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .u-body #carousel-0900 .u-carousel-control svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-body .u-section-1 > .u-image-1 {
+    width: calc(100% - 32px) !important;
+    min-height: clamp(210px, 62vw, 290px);
+  }
+
+  .u-body #carousel-0900 .u-group-1 {
+    width: min(100%, 350px) !important;
+    align-self: center;
+    margin: 0 auto !important;
+  }
+
+  .u-body #carousel-0900 .u-container-layout-1 {
+    padding: clamp(16px, 5vw, 22px) !important;
+  }
+
+  .u-body #carousel-0900 .u-text-1 {
+    font-size: clamp(1.45rem, 6.8vw, 1.8rem) !important;
+    line-height: 1.15;
+  }
+
+  .u-body #carousel-0900 .u-text-2 {
+    margin-top: 10px;
+    font-size: 0.9rem !important;
+    line-height: 1.45;
+  }
+
+  .u-body #carousel-0900 .u-btn-1 {
+    margin-top: 12px;
+    padding: 10px 18px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-header .u-sheet-1 {
+    width: calc(100% - 32px) !important;
+  }
+
+  .u-body .u-group,
+  .u-body .u-list,
+  .u-body .u-layout,
+  .u-body .u-layout-wrap,
+  .u-body .u-layout-row,
+  .u-body .u-layout-cell,
+  .u-body .custom-expanded,
+  .u-body .u-carousel,
+  .u-body .u-slider,
+  .u-body .u-carousel-inner,
+  .u-body .u-shape {
+    max-width: calc(100vw - 32px) !important;
+    box-sizing: border-box;
+  }
+
+  .u-body .u-slider {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  .u-body .u-text {
+    max-width: calc(100vw - 32px) !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body:has(#carousel-0900) .u-section-6 {
+    min-height: 0 !important;
+    background-position: center, center bottom !important;
+    background-size: cover, auto 100% !important;
+  }
+
+  body:has(#carousel-0900) .u-section-6 .u-sheet-1 {
+    display: flex;
+    min-height: 300px !important;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 28px;
+    box-sizing: border-box;
+  }
+
+  body:has(#carousel-0900) .u-section-6 .u-text-1 {
+    width: 100%;
+    margin: 0 !important;
+    font-size: clamp(1.7rem, 3.5vw, 2rem);
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  body:has(#carousel-0900) .u-section-6 .u-group-elements-1 {
+    width: 190px;
+    min-height: 52px;
+    margin: 28px auto 0 !important;
+  }
+
+  body:has(#carousel-0900) .u-section-6 .u-shape-1 {
+    width: 180px;
+    height: 48px;
+    margin: 4px auto 0 !important;
+  }
+
+  body:has(#carousel-0900) .u-section-6 .u-btn-1 {
+    display: flex;
+    width: 180px;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    margin: -52px auto 0 !important;
+    padding: 12px 20px;
+    box-sizing: border-box;
+  }
+
+  body:has(#carousel-0900) .u-section-10 {
+    display: flex;
+    min-height: 0 !important;
+    flex-direction: column;
+    padding: 32px 0 24px;
+    background-position: center, center !important;
+    background-size: cover, cover !important;
+    box-sizing: border-box;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-text-10 {
+    position: static;
+    order: 0;
+    width: auto;
+    height: auto;
+    margin: 0 24px 16px !important;
+    color: #fff !important;
+    font-size: 1.8rem;
+    line-height: 1.25;
+    text-align: center;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-slider-1 {
+    order: 1;
+    width: calc(100% - 48px) !important;
+    max-width: 600px;
+    height: 430px !important;
+    min-height: 430px !important;
+    margin: 0 auto !important;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(24, 42, 60, 0.12);
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-container-layout-1,
+  body:has(#carousel-0900) .u-section-10 .u-container-layout-2,
+  body:has(#carousel-0900) .u-section-10 .u-container-layout-3 {
+    height: 100%;
+    padding: 24px 36px 48px !important;
+    box-sizing: border-box;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-image-1,
+  body:has(#carousel-0900) .u-section-10 .u-image-2,
+  body:has(#carousel-0900) .u-section-10 .u-image-3 {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto !important;
+    border-radius: 50%;
+    background-position: center top;
+    background-size: cover;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-text-1,
+  body:has(#carousel-0900) .u-section-10 .u-text-4,
+  body:has(#carousel-0900) .u-section-10 .u-text-7 {
+    width: auto;
+    margin: 16px 0 0 !important;
+    font-size: 1rem;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-text-2,
+  body:has(#carousel-0900) .u-section-10 .u-text-5,
+  body:has(#carousel-0900) .u-section-10 .u-text-8 {
+    width: auto;
+    margin: 16px auto 0 !important;
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-text-3,
+  body:has(#carousel-0900) .u-section-10 .u-text-6,
+  body:has(#carousel-0900) .u-section-10 .u-text-9 {
+    width: auto;
+    margin: 6px auto 0 !important;
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-carousel-control-1,
+  body:has(#carousel-0900) .u-section-10 .u-carousel-control-2 {
+    z-index: 2;
+    width: 42px;
+    height: 42px;
+    top: auto !important;
+    bottom: 10px !important;
+    transform: none !important;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    color: #21438b;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-carousel-control-1 {
+    left: 12px;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-carousel-control-2 {
+    right: 12px;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-carousel-indicators-1 {
+    z-index: 2;
+    bottom: 25px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  body:has(#carousel-0900) .u-section-10 .u-slider-1 {
+    height: 470px !important;
+    min-height: 470px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body:has(#carousel-0900) .u-section-2 .u-sheet-1 {
+    min-height: 0 !important;
+    padding: 28px 0;
+  }
+
+  body:has(#carousel-0900) .u-section-2 .u-text-1 {
+    width: auto !important;
+    margin: 0 0 24px !important;
+    text-align: center;
+  }
+
+  body:has(#carousel-0900) .u-section-2 .u-layout-wrap-1 {
+    margin: 0 !important;
+  }
+
+  body:has(#carousel-0900) .u-section-2 .u-layout-cell-1,
+  body:has(#carousel-0900) .u-section-2 .u-layout-cell-2,
+  body:has(#carousel-0900) .u-section-2 .u-layout-cell-3,
+  body:has(#carousel-0900) .u-section-2 .u-layout-cell-4,
+  body:has(#carousel-0900) .u-section-2 .u-layout-cell-5,
+  body:has(#carousel-0900) .u-section-2 .u-layout-cell-6 {
+    width: 100% !important;
+    min-height: 0 !important;
+  }
+
+  body:has(#carousel-0900) .u-section-2 .u-container-layout-1,
+  body:has(#carousel-0900) .u-section-2 .u-container-layout-3,
+  body:has(#carousel-0900) .u-section-2 .u-container-layout-5,
+  body:has(#carousel-0900) .u-section-2 .u-container-layout-7,
+  body:has(#carousel-0900) .u-section-2 .u-container-layout-9,
+  body:has(#carousel-0900) .u-section-2 .u-container-layout-11 {
+    padding: 16px !important;
+  }
+
+  body:has(#carousel-0900) .u-section-2 .u-image-1,
+  body:has(#carousel-0900) .u-section-2 .u-image-2,
+  body:has(#carousel-0900) .u-section-2 .u-image-3,
+  body:has(#carousel-0900) .u-section-2 .u-image-4,
+  body:has(#carousel-0900) .u-section-2 .u-image-5,
+  body:has(#carousel-0900) .u-section-2 .u-image-6 {
+    display: block;
+    width: 72px !important;
+    height: 72px !important;
+    margin: 0 auto !important;
+  }
+
+  body:has(#carousel-0900) .u-section-2 .u-group-1,
+  body:has(#carousel-0900) .u-section-2 .u-group-2,
+  body:has(#carousel-0900) .u-section-2 .u-group-3,
+  body:has(#carousel-0900) .u-section-2 .u-group-4,
+  body:has(#carousel-0900) .u-section-2 .u-group-5,
+  body:has(#carousel-0900) .u-section-2 .u-group-6 {
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 14px 0 0 !important;
+  }
+
+  body:has(#carousel-0900) .u-section-2 .u-container-layout-2,
+  body:has(#carousel-0900) .u-section-2 .u-container-layout-4,
+  body:has(#carousel-0900) .u-section-2 .u-container-layout-6,
+  body:has(#carousel-0900) .u-section-2 .u-container-layout-8,
+  body:has(#carousel-0900) .u-section-2 .u-container-layout-10,
+  body:has(#carousel-0900) .u-section-2 .u-container-layout-12 {
+    padding: 16px !important;
+  }
+
+  body:has(#carousel-0900) .u-section-2 .u-text-2,
+  body:has(#carousel-0900) .u-section-2 .u-text-4,
+  body:has(#carousel-0900) .u-section-2 .u-text-6,
+  body:has(#carousel-0900) .u-section-2 .u-text-8,
+  body:has(#carousel-0900) .u-section-2 .u-text-10,
+  body:has(#carousel-0900) .u-section-2 .u-text-12 {
+    margin: 0 !important;
+    font-size: 1.15rem;
+    line-height: 1.3;
+  }
+
+  body:has(#carousel-0900) .u-section-2 .u-text-3,
+  body:has(#carousel-0900) .u-section-2 .u-text-5,
+  body:has(#carousel-0900) .u-section-2 .u-text-7,
+  body:has(#carousel-0900) .u-section-2 .u-text-9,
+  body:has(#carousel-0900) .u-section-2 .u-text-11,
+  body:has(#carousel-0900) .u-section-2 .u-text-13 {
+    margin: 8px 0 0 !important;
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  body:has(#carousel-0900) .u-section-3 .u-sheet-1 {
+    min-height: 0 !important;
+    padding: 28px 0 12px;
+  }
+
+  body:has(#carousel-0900) .u-section-3 .u-text-1 {
+    width: auto !important;
+    margin: 0 0 22px !important;
+    font-size: clamp(1.5rem, 6vw, 1.9rem);
+    line-height: 1.25;
+  }
+
+  body:has(#carousel-0900) .u-section-3 .u-layout-wrap-1 {
+    margin: 0 0 20px !important;
+  }
+
+  body:has(#carousel-0900) .u-section-3 .u-image-1,
+  body:has(#carousel-0900) .u-section-3 .u-image-2,
+  body:has(#carousel-0900) .u-section-3 .u-image-3,
+  body:has(#carousel-0900) .u-section-3 .u-image-4 {
+    width: 100% !important;
+    min-height: clamp(220px, 68vw, 280px) !important;
+  }
+
+  body:has(#carousel-0900) .u-section-7 .u-sheet-1 {
+    min-height: 0 !important;
+    padding: 20px 0;
+  }
+
+  body:has(#carousel-0900) .u-section-7 .u-video-1 {
+    width: 100% !important;
+    min-height: 0 !important;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto !important;
+    overflow: hidden;
+  }
+
+  body:has(#carousel-0900) .u-section-8 .u-sheet-1 {
+    min-height: 0 !important;
+    padding: 24px 0;
+  }
+
+  body:has(#carousel-0900) .u-section-8 .u-text-1 {
+    margin: 0 !important;
+  }
+
+  body:has(#carousel-0900) .u-section-8 .u-layout-wrap-1 {
+    margin: 20px 0 0 !important;
+  }
+
+  body:has(#carousel-0900) .u-section-8 .u-layout-cell-2 {
+    display: none;
+  }
+
+  body:has(#carousel-0900) .u-section-8 .u-layout-cell-1,
+  body:has(#carousel-0900) .u-section-8 .u-layout-cell-3 {
+    width: 100% !important;
+    min-height: 0 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-1 {
+    min-height: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-1 .u-image-1 {
+    width: 100% !important;
+    min-height: clamp(220px, 65vw, 320px);
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-2 .u-sheet-1 {
+    min-height: 0 !important;
+    padding: 24px 0;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-2 .u-layout-wrap-1 {
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-2 .u-layout-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-2 .u-layout-cell-1,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-2 .u-layout-cell-3 {
+    width: 100% !important;
+    min-height: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-2 .u-layout-cell-2 {
+    display: none;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-2 .u-text-1 {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+    line-height: 1.25;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-sheet-1 {
+    min-height: 0 !important;
+    padding: 24px 0;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-text-1 {
+    width: auto !important;
+    margin: 0 0 20px !important;
+    font-size: clamp(1.4rem, 6vw, 1.8rem);
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-layout-wrap-1 {
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-layout-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-layout-cell-1,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-layout-cell-2,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-layout-cell-3,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-layout-cell-4 {
+    width: 100% !important;
+    min-height: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-image-1,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-image-2,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-image-3,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-image-4 {
+    width: 72px !important;
+    height: 72px !important;
+    margin: 0 auto !important;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-container-layout-1,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-container-layout-3,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-container-layout-5,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-container-layout-7 {
+    padding: 16px !important;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-group-1,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-group-2,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-group-3,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-group-4 {
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 16px 0 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-container-layout-2,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-container-layout-4,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-container-layout-6,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-container-layout-8 {
+    padding: 16px !important;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-text-2,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-text-4,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-text-6,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-text-8 {
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-text-3,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-text-5,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-text-7,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-text-9 {
+    margin: 12px 0 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-btn-1,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-btn-2,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-btn-3,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-3 .u-btn-4 {
+    display: inline-flex;
+    margin: 16px auto 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-4 .u-sheet-1 {
+    min-height: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-4 .u-layout-wrap-1 {
+    margin: 24px 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-4 .u-layout-cell-1,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-4 .u-layout-cell-2,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-4 .u-layout-cell-3,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-4 .u-layout-cell-4,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-4 .u-layout-cell-5 {
+    min-height: 110px !important;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-4 .u-image-1,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-4 .u-image-2,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-4 .u-image-3,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-4 .u-image-4,
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-4 .u-image-5 {
+    display: block;
+    width: min(160px, 70%) !important;
+    height: 62px !important;
+    margin: auto !important;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  body:has(#carousel-0900) .u-section-3 .u-sheet-1 {
+    min-height: 0 !important;
+    padding: 32px 0 16px;
+  }
+
+  body:has(#carousel-0900) .u-section-3 .u-text-1 {
+    width: auto !important;
+    margin: 0 0 24px !important;
+  }
+
+  body:has(#carousel-0900) .u-section-3 .u-image-1,
+  body:has(#carousel-0900) .u-section-3 .u-image-2,
+  body:has(#carousel-0900) .u-section-3 .u-image-3,
+  body:has(#carousel-0900) .u-section-3 .u-image-4 {
+    min-height: 300px !important;
+  }
+
+  body:has(#carousel-0900) .u-section-7 .u-sheet-1 {
+    min-height: 0 !important;
+    padding: 24px 0;
+  }
+
+  body:has(#carousel-0900) .u-section-7 .u-video-1 {
+    min-height: 0 !important;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto !important;
+    overflow: hidden;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-4 .u-sheet-1 {
+    min-height: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-layanan-kemitraan.css"]) .u-section-4 .u-layout-wrap-1 {
+    margin: 24px 0 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body:has(#carousel-0900) .u-section-3 .u-backstage-hidden {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-sheet-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-sheet-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-sheet-1 {
+    min-height: 0 !important;
+    padding: 28px 16px;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-text-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-text-2,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-text-1 {
+    width: auto !important;
+    margin: 0 0 20px !important;
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    line-height: 1.25;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-layout-wrap-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-layout-wrap-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-wrap-1 {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-layout-row,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-layout-row,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-layout-cell-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-layout-cell-3,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-layout-cell-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-layout-cell-2,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-layout-cell-3,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-cell-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-cell-2,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-cell-3,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-cell-4,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-cell-5,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-cell-6,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-cell-7 {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 0 !important;
+    flex: 0 0 auto !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-layout-cell-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-layout-cell-3,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-layout-cell-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-layout-cell-2,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-layout-cell-3 {
+    max-width: 100% !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-layout-cell-2 {
+    display: none !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-container-layout-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-container-layout-3,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-container-layout-2,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-container-layout-3,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 [class*="u-container-layout-"] {
+    padding: 18px !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-image-1 {
+    width: 100% !important;
+    min-height: 220px !important;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-backstage-hidden {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-text-3,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-text-5,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-3,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-5,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-7,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-9,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-11,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-13,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-15 {
+    margin: 8px 0 0 !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-image-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-image-2,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-image-3,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-image-4,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-image-5,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-image-6,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-image-7 {
+    width: 72px !important;
+    height: 72px !important;
+    margin: 0 0 12px !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-2,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-4,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-6,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-8,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-10,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-12,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-14 {
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-backstage-hidden {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-2 .u-sheet-1,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-sheet-1,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-sheet-1 {
+    min-height: 0 !important;
+    padding: 28px 16px;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-2 .u-text-1,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-1 {
+    width: auto !important;
+    margin: 0 0 20px !important;
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    line-height: 1.25;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-2 .u-image-1 {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-wrap-1 {
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-cell-1,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-cell-2,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-cell-3,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-cell-4,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-cell-5,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-cell-6,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-cell-7,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-cell-8 {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    flex: 0 0 100% !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 [class*="u-container-layout-"] {
+    padding: 16px !important;
+    text-align: center;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-image-1,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-image-2,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-image-3,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-image-4,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-image-5,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-image-6,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-image-7,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-image-8 {
+    display: block;
+    width: 80px !important;
+    height: 80px !important;
+    margin: 0 auto 10px !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-2,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-4,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-6,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-8,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-10,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-12,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-14,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-16 {
+    margin: 0 !important;
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-3,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-5,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-7,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-9,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-11,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-13,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-15,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-17 {
+    margin: 6px 0 0 !important;
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-backstage-hidden {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-2 .u-backstage-hidden,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-backstage-hidden {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-group-1 {
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-container-layout-1 {
+    display: flex;
+    flex-direction: column !important;
+    align-items: stretch;
+    padding: 24px 16px !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-text-1 {
+    width: auto !important;
+    margin: 0 !important;
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    align-self: stretch;
+    flex: 0 0 auto;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-layout-wrap-1 {
+    width: 100% !important;
+    margin: 20px 0 0 !important;
+    align-self: stretch;
+    flex: 0 0 auto;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-layout-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-image-1,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-layout-cell-2 {
+    width: 100% !important;
+    min-height: 0 !important;
+    flex: 0 0 auto !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-image-1 {
+    min-height: 220px !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-container-layout-2,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-container-layout-3 {
+    padding: 20px !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-text-2,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-text-3 {
+    width: auto !important;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-text-3 {
+    margin-top: 12px !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-group-elements-1 {
+    width: auto !important;
+    margin: 24px auto 0 !important;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-shape-1 {
+    display: none;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-btn-1 {
+    margin: 0 auto !important;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-2 .u-sheet-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-sheet-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-sheet-1 {
+    min-height: 0 !important;
+    padding: 28px 16px;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-2 .u-layout-wrap-1 {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-2 .u-layout-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-2 .u-layout-cell-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-2 .u-layout-cell-3 {
+    width: 100% !important;
+    min-height: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-2 .u-layout-cell-2 {
+    display: none !important;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-2 .u-text-1 {
+    width: auto !important;
+    margin: 0 0 14px !important;
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    line-height: 1.25;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-2 .u-text-2 {
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-text-1 {
+    width: auto !important;
+    margin: 0 0 20px !important;
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-wrap-1 {
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-col > .u-size-60 > .u-layout-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-cell-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-cell-2,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-cell-3,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-cell-4 {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    flex: 0 0 100% !important;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-container-layout-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-container-layout-3,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-container-layout-5,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-container-layout-7,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-container-layout-2,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-container-layout-4,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-container-layout-6,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-container-layout-8 {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 [class*="u-container-layout-"] {
+    padding: 12px !important;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-image-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-image-2,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-image-3,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-image-4 {
+    display: block;
+    width: 64px !important;
+    height: 64px !important;
+    margin: 0 auto !important;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-group-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-group-2,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-group-3,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-group-4 {
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 12px 0 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-text-3,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-text-5,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-text-7,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-text-9 {
+    margin: 8px 0 0 !important;
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-backstage-hidden,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-backstage-hidden {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-wrap-1 {
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-cell-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-cell-2,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-cell-3,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-cell-4 {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 110px !important;
+    flex: 0 0 100% !important;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-image-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-image-2,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-image-3,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-image-4 {
+    display: block;
+    width: min(140px, 90%) !important;
+    height: 60px !important;
+    margin: auto !important;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 360px) {
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-col > .u-size-60 > .u-layout-row {
+    grid-template-columns: 1fr;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 {
+    min-height: 0 !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-group-1 {
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-container-layout-1 {
+    padding: 32px 24px !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-text-1 {
+    width: auto !important;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-layout-wrap-1 {
+    width: 100% !important;
+    margin: 24px 0 0 !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-image-1,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-layout-cell-2 {
+    min-height: 280px !important;
+    flex: 0 0 auto !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-container-layout-2,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-container-layout-3 {
+    padding: 24px !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-text-2,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-text-3 {
+    width: auto !important;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-text-3 {
+    margin-top: 12px !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-group-elements-1 {
+    width: auto !important;
+    margin: 24px auto 0 !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-shape-1 {
+    display: none;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-btn-1 {
+    margin: 0 auto !important;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-sheet-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-sheet-1 {
+    min-height: 0 !important;
+    padding: 32px 24px;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-text-1 {
+    width: auto !important;
+    margin: 0 0 24px !important;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-wrap-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-wrap-1 {
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-cell-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-cell-2,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-cell-3,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-cell-4 {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    flex: 0 0 100% !important;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-cell-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-cell-2,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-cell-3,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-cell-4 {
+    width: auto !important;
+    max-width: 100% !important;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-group-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-group-2,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-group-3,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-group-4 {
+    width: 100% !important;
+    min-height: 190px !important;
+    margin: 18px 0 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-cell-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-cell-2,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-cell-3,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-cell-4 {
+    min-height: 120px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-col > .u-size-60 > .u-layout-row,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-col > .u-size-60 > .u-layout-row,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-row {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-sheet-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-sheet-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-sheet-1 {
+    width: 100% !important;
+    padding: 28px 20px;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-text-3,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-text-3,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-text-5 {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-image-1 {
+    min-height: clamp(180px, 58vw, 240px) !important;
+    border-radius: 20px;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-layout-cell-3 {
+    min-height: 0 !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-container-layout-3 {
+    padding: 22px !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-text-5 {
+    margin: 12px 0 0 !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-icon-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-icon-2,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-icon-3,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-icon-4,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-icon-5 {
+    display: none;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 {
+    background: #f5f8fc;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-cell-1 {
+    min-height: 0 !important;
+    border-radius: 22px;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-container-layout-1 {
+    display: grid;
+    grid-template-columns: 56px minmax(0, 1fr);
+    align-items: center;
+    gap: 4px 14px;
+    padding: 20px !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-1 {
+    grid-column: 1 / -1;
+    margin: 0 0 8px !important;
+    font-size: clamp(1.35rem, 5.5vw, 1.8rem);
+    line-height: 1.2;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-image-1 {
+    grid-column: 1;
+    grid-row: 2 / 4;
+    width: 56px !important;
+    height: 56px !important;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-2 {
+    grid-column: 2;
+    align-self: end;
+    margin: 0 !important;
+    font-size: 1.2rem;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-3 {
+    grid-column: 2;
+    align-self: start;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-col > .u-size-20 > .u-layout-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-cell-2,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-cell-3,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-cell-4,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-cell-5,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-cell-6,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-cell-7 {
+    width: auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    flex: initial !important;
+    border-radius: 18px;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-container-layout-2,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-container-layout-3,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-container-layout-4,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-container-layout-5,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-container-layout-6,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-container-layout-7 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 12px !important;
+    text-align: center;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-image-2,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-image-3,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-image-4,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-image-5,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-image-6,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-image-7 {
+    width: 56px !important;
+    height: 56px !important;
+    margin: 0 0 10px !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-4,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-6,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-8,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-10,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-12,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-14 {
+    margin: 0 !important;
+    font-size: 1.05rem;
+    line-height: 1.3;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-5,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-7,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-9,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-11,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-13,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-15 {
+    margin: 6px 0 0 !important;
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 359px) {
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-col > .u-size-20 > .u-layout-row {
+    gap: 8px;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-container-layout-2,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-container-layout-3,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-container-layout-4,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-container-layout-5,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-container-layout-6,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-container-layout-7 {
+    padding: 14px 8px !important;
+  }
+}
+
+body:has(#carousel-0900) {
+  overflow-x: clip;
+}
+
+body:has(#carousel-0900) section > .u-sheet,
+body:has(#carousel-0900) #carousel-0900 .u-sheet-1 {
+  width: min(calc(100% - clamp(28px, 6vw, 80px)), 1320px) !important;
+  max-width: 1320px;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  box-sizing: border-box;
+}
+
+body:has(#carousel-0900) .u-text,
+body:has(#carousel-0900) .u-layout-cell,
+body:has(#carousel-0900) .u-container-layout {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+body:has(#carousel-0900) #carousel-0900 {
+  touch-action: pan-y;
+}
+
+body:has(#carousel-0900) #carousel-0900 .u-carousel-inner,
+body:has(#carousel-0900) #carousel-0900 .u-carousel-item {
+  height: clamp(520px, 76vh, 760px);
+  height: clamp(520px, 76svh, 760px);
+  min-height: 520px;
+}
+
+body:has(#carousel-0900) #carousel-0900 .u-sheet-1 {
+  display: flex;
+  min-height: 100%;
+  align-items: flex-end;
+  padding: 24px 0 48px;
+}
+
+body:has(#carousel-0900) #carousel-0900 .u-group-1 {
+  width: min(633px, 72%) !important;
+  max-width: 100%;
+  height: auto !important;
+  min-height: 0;
+  margin: 0 !important;
+  border-radius: 24px;
+}
+
+body:has(#carousel-0900) #carousel-0900 .u-container-layout-1 {
+  padding: clamp(24px, 4vw, 48px) !important;
+}
+
+body:has(#carousel-0900) #carousel-0900 .u-text-1 {
+  width: auto;
+  margin: 0 !important;
+  font-size: clamp(2rem, 4.5vw, 3.5rem) !important;
+  line-height: 1.12;
+  overflow-wrap: anywhere;
+}
+
+body:has(#carousel-0900) #carousel-0900 .u-text-2 {
+  width: auto;
+  margin: 16px 0 0 !important;
+  font-size: clamp(1rem, 1.8vw, 1.25rem) !important;
+  line-height: 1.55;
+}
+
+body:has(#carousel-0900) #carousel-0900 .u-shape-1 {
+  display: none;
+}
+
+body:has(#carousel-0900) #carousel-0900 .u-btn-1 {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0 0 !important;
+  padding: 12px 24px !important;
+}
+
+body:has(#carousel-0900) #carousel-0900 .u-carousel-inner,
+body:has(#carousel-0900) #carousel-32d8 .u-carousel-inner {
+  touch-action: pan-y;
+}
+
+body:has(#carousel-0900) #carousel-0900 .u-carousel-indicators {
+  z-index: 3;
+  bottom: 12px;
+  display: flex !important;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+}
+
+body:has(#carousel-0900) #carousel-0900 .u-carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  margin: 0;
+}
+
+body:has(#carousel-0900) #carousel-0900 .u-carousel-control {
+  z-index: 3;
+  display: flex !important;
+  width: 28px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #fff !important;
+}
+
+body:has(#carousel-0900) #carousel-0900 .u-carousel-control-prev {
+  left: 12px;
+}
+
+body:has(#carousel-0900) #carousel-0900 .u-carousel-control-next {
+  right: 12px;
+}
+
+body:has(#carousel-0900) #carousel-0900 .u-carousel-control svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+body:has(#carousel-0900) .u-section-2 .u-layout-cell .u-group {
+  width: 100% !important;
+  max-width: 100%;
+}
+
+body:has(#carousel-0900) .u-section-10 #carousel-32d8 .u-carousel-control {
+  z-index: 3;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  body:has(#carousel-0900) .u-section-2 .u-layout-cell,
+  body:has(#carousel-0900) .u-section-3 .u-layout-cell {
+    width: 50% !important;
+    flex: 0 0 50% !important;
+  }
+
+  body:has(#carousel-0900) .u-section-2 .u-layout-cell {
+    min-height: 350px !important;
+  }
+
+  body:has(#carousel-0900) .u-section-3 .u-layout-cell {
+    min-height: 300px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body:has(#carousel-0900) section > .u-sheet,
+  body:has(#carousel-0900) #carousel-0900 .u-sheet-1 {
+    width: calc(100% - 32px) !important;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-inner,
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-item {
+    height: clamp(460px, 70vh, 620px);
+    height: clamp(460px, 70svh, 620px);
+    min-height: 460px;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-sheet-1 {
+    align-items: flex-end;
+    padding: 20px 0 52px;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-group-1 {
+    width: min(100%, 350px) !important;
+    margin: 0 auto !important;
+    border-radius: 20px;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-container-layout-1 {
+    padding: clamp(16px, 4.5vw, 22px) !important;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-text-1 {
+    font-size: clamp(1.45rem, 6.8vw, 1.8rem) !important;
+    line-height: 1.15;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-text-2 {
+    margin-top: 10px !important;
+    font-size: 0.9rem !important;
+    line-height: 1.45;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-btn-1 {
+    min-height: 42px;
+    margin-top: 12px !important;
+    padding: 10px 18px !important;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-control {
+    width: 40px;
+    height: 40px;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-control-prev {
+    left: 8px;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-control-next {
+    right: 8px;
+  }
+
+  body:has(#carousel-0900) .u-section-2 .u-layout-cell,
+  body:has(#carousel-0900) .u-section-3 .u-layout-cell,
+  body:has(#carousel-0900) .u-section-5 .u-layout-cell,
+  body:has(#carousel-0900) .u-section-8 .u-layout-cell {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  body:has(#carousel-0900) .u-section-2 .u-layout-cell {
+    min-height: 0 !important;
+  }
+
+  body:has(#carousel-0900) .u-section-2 .u-container-layout {
+    padding: 20px !important;
+  }
+
+  body:has(#carousel-0900) .u-section-2 .u-group {
+    min-height: 0;
+    margin-top: 16px !important;
+  }
+
+  body:has(#carousel-0900) .u-section-2 .u-text-1,
+  body:has(#carousel-0900) .u-section-3 .u-text-1,
+  body:has(#carousel-0900) .u-section-11 .u-text-1 {
+    width: 100% !important;
+    margin: 0 auto !important;
+    font-size: clamp(1.45rem, 6vw, 2rem);
+    line-height: 1.25;
+  }
+
+  body:has(#carousel-0900) .u-section-2 .u-layout-wrap,
+  body:has(#carousel-0900) .u-section-3 .u-layout-wrap,
+  body:has(#carousel-0900) .u-section-8 .u-layout-wrap {
+    margin-top: 24px !important;
+    margin-bottom: 24px !important;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-slider-1 {
+    height: clamp(430px, 68vh, 520px) !important;
+    height: clamp(430px, 68svh, 520px) !important;
+    min-height: 430px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  body:has(#carousel-0900) section > .u-sheet,
+  body:has(#carousel-0900) #carousel-0900 .u-sheet-1 {
+    width: calc(100% - 24px) !important;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-inner,
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-item {
+    height: clamp(500px, 82vh, 640px);
+    height: clamp(500px, 82svh, 640px);
+    min-height: 500px;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-container-layout-1 {
+    padding: 18px !important;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-control {
+    width: 36px;
+    height: 36px;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-slider-1 {
+    width: calc(100% - 24px) !important;
+  }
+}
+
+body:has(#carousel-0900) .u-section-5 {
+  min-height: 0 !important;
+}
+
+body:has(#carousel-0900) .u-section-5 .u-group-1 {
+  width: 100% !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding: clamp(32px, 5vw, 64px) 0 !important;
+}
+
+body:has(#carousel-0900) .u-section-5 .u-text-1 {
+  width: min(100% - 32px, 900px) !important;
+  margin: 0 auto !important;
+  font-size: clamp(1.6rem, 3.2vw, 2.5rem) !important;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+body:has(#carousel-0900) .u-section-5 .u-layout-wrap-1 {
+  width: min(1120px, calc(100% - 48px)) !important;
+  max-width: 1120px;
+  margin: clamp(24px, 4vw, 48px) auto 0 !important;
+}
+
+body:has(#carousel-0900) .u-section-5 .u-layout-row {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 24px);
+  margin: 0 !important;
+}
+
+body:has(#carousel-0900) .u-section-5 .u-layout-cell-1,
+body:has(#carousel-0900) .u-section-5 .u-layout-cell-2 {
+  width: auto !important;
+  min-width: 0;
+  min-height: clamp(190px, 22vw, 270px) !important;
+  margin: 0 !important;
+  border-radius: 24px;
+}
+
+body:has(#carousel-0900) .u-section-5 .u-container-layout-2,
+body:has(#carousel-0900) .u-section-5 .u-container-layout-3 {
+  display: flex !important;
+  min-height: inherit;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 2.4vw, 32px);
+  padding: clamp(20px, 3vw, 36px) !important;
+  text-align: left;
+}
+
+body:has(#carousel-0900) .u-section-5 .u-image-1,
+body:has(#carousel-0900) .u-section-5 .u-image-2 {
+  display: block;
+  width: clamp(100px, 11vw, 144px) !important;
+  height: auto !important;
+  flex: 0 0 clamp(100px, 11vw, 144px);
+  margin: 0 !important;
+  object-fit: contain;
+}
+
+body:has(#carousel-0900) .u-section-5 .u-text-2,
+body:has(#carousel-0900) .u-section-5 .u-text-3 {
+  width: auto;
+  max-width: 100%;
+  margin: 0 !important;
+  font-size: clamp(1.2rem, 2vw, 1.75rem) !important;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 767px) {
+  body:has(#carousel-0900) .u-section-5 .u-layout-wrap-1 {
+    width: calc(100% - 32px) !important;
+  }
+
+  body:has(#carousel-0900) .u-section-5 .u-layout-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  body:has(#carousel-0900) .u-section-5 .u-layout-cell-1,
+  body:has(#carousel-0900) .u-section-5 .u-layout-cell-2 {
+    min-height: 150px !important;
+  }
+
+  body:has(#carousel-0900) .u-section-5 .u-container-layout-2,
+  body:has(#carousel-0900) .u-section-5 .u-container-layout-3 {
+    justify-content: flex-start;
+    gap: 18px;
+    padding: 18px !important;
+    text-align: left;
+  }
+
+  body:has(#carousel-0900) .u-section-5 .u-image-1,
+  body:has(#carousel-0900) .u-section-5 .u-image-2 {
+    width: clamp(84px, 22vw, 112px) !important;
+    flex-basis: clamp(84px, 22vw, 112px);
+  }
+
+  body:has(#carousel-0900) .u-section-5 .u-text-2,
+  body:has(#carousel-0900) .u-section-5 .u-text-3 {
+    font-size: clamp(1.1rem, 4.8vw, 1.45rem) !important;
+    text-align: left;
+  }
+}
+
+@media (max-width: 767px) {
+  body:has(#carousel-0900) .u-section-10 {
+    display: flex;
+    min-height: 0 !important;
+    flex-direction: column;
+    gap: 18px;
+    padding: 28px 16px 24px;
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    transition: none !important;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-text-10 {
+    position: static;
+    order: 0;
+    width: 100%;
+    height: auto;
+    margin: 0 !important;
+    font-size: clamp(1.5rem, 6vw, 1.8rem);
+    line-height: 1.25;
+    text-align: center;
+    animation: none !important;
+    transform: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-slider-1 {
+    order: 1;
+    width: 100% !important;
+    max-width: 520px;
+    height: 430px !important;
+    min-height: 0 !important;
+    margin: 0 auto !important;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 12px 30px rgba(24, 42, 60, 0.16);
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-carousel-inner,
+  body:has(#carousel-0900) .u-section-10 .u-carousel-item,
+  body:has(#carousel-0900) .u-section-10 .u-container-layout {
+    height: 100%;
+    min-height: 0;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-carousel-inner {
+    touch-action: pan-y;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-carousel-item {
+    background: #fff;
+    transition-duration: 100ms !important;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-container-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 24px 52px !important;
+    background: #fff;
+    box-sizing: border-box;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-shape-1,
+  body:has(#carousel-0900) .u-section-10 .u-shape-2,
+  body:has(#carousel-0900) .u-section-10 .u-shape-3 {
+    display: none;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-image-1,
+  body:has(#carousel-0900) .u-section-10 .u-image-2,
+  body:has(#carousel-0900) .u-section-10 .u-image-3 {
+    flex: 0 0 72px;
+    margin: 0 auto !important;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-text-1,
+  body:has(#carousel-0900) .u-section-10 .u-text-4,
+  body:has(#carousel-0900) .u-section-10 .u-text-7 {
+    width: 100%;
+    margin: 18px 0 0 !important;
+    color: #43566d;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-text-2,
+  body:has(#carousel-0900) .u-section-10 .u-text-5,
+  body:has(#carousel-0900) .u-section-10 .u-text-8 {
+    width: 100%;
+    margin: 18px 0 0 !important;
+    color: #21438b;
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-text-3,
+  body:has(#carousel-0900) .u-section-10 .u-text-6,
+  body:has(#carousel-0900) .u-section-10 .u-text-9 {
+    width: 100%;
+    margin: 6px 0 0 !important;
+    color: #718197;
+    font-size: 0.875rem;
+    line-height: 1.3;
+  }
+
+  body:has(#carousel-0900) .u-section-10 .u-carousel-indicators-1 {
+    bottom: 18px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body:has(#carousel-0900) .u-section-5 .u-group-1 {
+    padding: 24px 0 !important;
+    border-radius: 28px;
+  }
+
+  body:has(#carousel-0900) .u-section-5 .u-text-1 {
+    width: calc(100% - 32px) !important;
+    margin: 0 auto !important;
+    font-size: clamp(1.45rem, 5.8vw, 1.8rem) !important;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  body:has(#carousel-0900) .u-section-5 .u-layout-wrap-1 {
+    width: min(100% - 32px, 480px) !important;
+    margin: 20px auto 0 !important;
+  }
+
+  body:has(#carousel-0900) .u-section-5 .u-layout-cell-1,
+  body:has(#carousel-0900) .u-section-5 .u-layout-cell-2 {
+    height: auto !important;
+    min-height: 156px !important;
+    margin: 0 !important;
+    border-radius: 24px;
+  }
+
+  body:has(#carousel-0900) .u-section-5 .u-container-layout-2,
+  body:has(#carousel-0900) .u-section-5 .u-container-layout-3 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px !important;
+    text-align: center;
+  }
+
+  body:has(#carousel-0900) .u-section-5 .u-image-1,
+  body:has(#carousel-0900) .u-section-5 .u-image-2 {
+    width: 72px !important;
+    height: 72px !important;
+    flex: 0 0 72px;
+    object-fit: contain;
+  }
+
+  body:has(#carousel-0900) .u-section-5 .u-text-2,
+  body:has(#carousel-0900) .u-section-5 .u-text-3 {
+    width: 100%;
+    font-size: clamp(1.05rem, 4.5vw, 1.3rem) !important;
+    line-height: 1.25;
+    text-align: center;
+    text-wrap: balance;
+  }
+}

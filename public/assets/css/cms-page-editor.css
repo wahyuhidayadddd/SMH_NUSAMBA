@@ -1,0 +1,18 @@
+[data-cms-editable]:hover {
+  outline: 2px dashed #1378bd !important;
+  outline-offset: 3px;
+  cursor: text !important;
+}
+
+[data-cms-selected] {
+  outline: 3px solid #087bc1 !important;
+  outline-offset: 3px;
+}
+
+img[data-cms-selected] {
+  cursor: pointer !important;
+}
+
+body.cms-editing {
+  overflow-x: hidden;
+}

@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="​Memobilisasi&nbsp;dana masyarakat">
+    <meta name="description" content="">
+    <title>HOME</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="index.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 8.8.2, nicepage.com">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=DM+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900">
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "SMH - NUSAMBA",
+		"logo": "images/nusamba-x4000-1-small.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="HOME">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  <style>
+/* =========================================================
+   responsive-fix.css  -  BPR Nusamba
+   Pasang SETELAH <link rel="stylesheet" href="index.css">
+   ========================================================= */
+
+:root {
+  --biru-1: #1b75bc;
+  --biru-2: #478ac9;
+  --biru-gelap: #0f4f85;
+}
+
+/* ---------- Dasar ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html, body { max-width: 100%; overflow-x: hidden; }
+img, video, svg { max-width: 100%; height: auto; }
+.u-sheet { max-width: 100%; }
+
+/* ---------- FIX: biru "Keuntungan Bergabung" hilang saat scroll ----------
+   Warna dipaku di section DAN grupnya, tanpa attachment/animasi
+   yang bisa membuatnya transparan. */
+#block-9,
+#block-9 .u-section-5,
+.u-section-5 {
+  background-color: var(--biru-1) !important;
+  background-image: linear-gradient(135deg, var(--biru-1) 0%, var(--biru-2) 100%) !important;
+  background-attachment: scroll !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative;
+  z-index: 1;
+}
+#block-9 .u-group-1,
+.u-section-5 .u-group-1 {
+  background-color: var(--biru-1) !important;
+  background-image: linear-gradient(135deg, var(--biru-1) 0%, var(--biru-2) 100%) !important;
+  background-attachment: scroll !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  animation: none !important;
+  transform: none !important;
+  will-change: auto !important;
+}
+#block-9 h2 { color: #fff !important; }
+
+/* ---------- Hero carousel ---------- */
+#carousel-0900 .u-carousel-inner { touch-action: pan-y; }
+#carousel-0900 h1 { font-size: clamp(1.9rem, 5vw, 4rem) !important; line-height: 1.15; }
+#carousel-0900 h3 { font-size: clamp(.95rem, 1.8vw, 1.25rem) !important; line-height: 1.5; }
+
+/* ---------- Tablet (<= 991px) ---------- */
+@media (max-width: 991px) {
+  .u-sheet { padding-left: 16px; padding-right: 16px; }
+  .u-layout-row { flex-wrap: wrap !important; }
+  .u-layout-cell { margin-bottom: 16px; }
+
+  /* kartu produk: 2 kolom */
+  .u-section-2 .u-layout-cell { width: 50% !important; flex: 0 0 50% !important; }
+
+  /* section 3 (4 kartu) : 2 kolom */
+  .u-section-3 .u-layout-cell { width: 50% !important; flex: 0 0 50% !important; min-height: 320px; }
+
+  /* section 9 (promo) : tumpuk */
+  .u-section-9 .u-layout-row > div { width: 100% !important; flex: 0 0 100% !important; }
+}
+
+/* ---------- Mobile (<= 767px) ---------- */
+@media (max-width: 767px) {
+  h2.u-text { font-size: clamp(1.5rem, 6vw, 2rem) !important; line-height: 1.2; }
+
+  /* hero */
+  .u-section-1-1 .u-sheet-1, .u-section-1-2 .u-sheet-1 { min-height: 480px; }
+  .u-section-1-1 .u-group-1, .u-section-1-2 .u-group-1 {
+    width: 92% !important; max-width: 520px; height: auto !important;
+    margin: 40px auto !important; padding: 24px 18px !important;
+  }
+  .u-carousel-control { display: none !important; } /* pakai swipe di HP */
+
+  /* produk: 1 kolom */
+  .u-section-2 .u-layout-cell { width: 100% !important; flex: 0 0 100% !important; }
+
+  /* keuntungan: 1 kolom, biru tetap */
+  #block-9 .u-layout-cell { width: 100% !important; flex: 0 0 100% !important; }
+  #block-9 .u-group-1 { padding: 28px 14px !important; border-radius: 16px; }
+
+  /* tingkat bunga */
+  .u-section-4 .u-sheet-1 { min-height: 0; padding-bottom: 32px; }
+  .u-section-4 .u-group-1 { position: static !important; width: 100% !important; margin-top: 16px; }
+
+  /* promo / video */
+  .u-section-8 .u-layout-cell { width: 100% !important; flex: 0 0 100% !important; }
+  .u-section-7 .u-video { min-height: 220px; }
+
+  /* testimoni */
+  .u-section-10 .u-carousel-item p { font-size: .95rem !important; }
+
+  /* mitra: 2 kolom */
+  .u-section-11 .u-layout-cell { width: 50% !important; flex: 0 0 50% !important; }
+
+  /* footer */
+  .u-footer .u-layout-row { flex-wrap: wrap !important; }
+  .u-footer .u-layout-cell { width: 100% !important; flex: 0 0 100% !important; margin-bottom: 20px; }
+  .u-footer .u-text-13 { font-size: .8rem !important; }
+}
+
+/* ---------- HP kecil (<= 480px) ---------- */
+@media (max-width: 480px) {
+  .u-section-3 .u-layout-cell { width: 100% !important; flex: 0 0 100% !important; }
+  .u-section-11 .u-layout-cell { padding: 6px; }
+}
+
+/* Floating WhatsApp */
+.floating-wa {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 64px;
+  height: 64px;
+  padding: 10px 18px 10px 10px;
+  overflow: hidden;
+  border-radius: 100px;
+  background: #25D366;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  transition: all 0.35s ease;
+}
+.floating-wa:hover { width: 220px; }
+.wa-icon {
+  display: flex;
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+}
+.wa-icon img { width: 26px; height: 26px; }
+.wa-text {
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+}
+.floating-wa:hover .wa-text { opacity: 1; transform: translateX(0); }
+.wa-title { font-size: 15px; font-weight: 700; line-height: 1; }
+.wa-subtitle { margin-top: 4px; font-size: 11px; opacity: 0.9; }
+@media (max-width: 768px) {
+  .floating-wa { right: 18px; bottom: 18px; width: 58px; height: 58px; }
+  .floating-wa:hover { width: 200px; }
+  .wa-icon { width: 40px; min-width: 40px; height: 40px; }
+  .wa-icon img { width: 22px; height: 22px; }
+}
+
+/* ---------- Layar sangat lebar ---------- */
+@media (min-width: 1600px) {
+  .u-sheet { max-width: 1320px; }
+}
+
+/* ---------- WhatsApp floating: tap-friendly di HP ---------- */
+.floating-wa.open { width: 220px; }
+.floating-wa.open .wa-text { opacity: 1; transform: translateX(0); }
+@media (hover: none) {
+  .floating-wa:hover { width: 64px; }
+  .floating-wa.open:hover { width: 220px; }
+}
+
+/* ---------- Aksesibilitas ---------- */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+</style>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    const wa = document.createElement("a");
+
+    wa.href = "https://wa.me/6281234567890";
+    wa.target = "_blank";
+    wa.className = "floating-wa";
+
+    wa.innerHTML = `
+    
+        <div class="wa-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+        </div>
+
+        <div class="wa-text">
+            <div class="wa-title">WhatsApp Sales</div>
+            <div class="wa-subtitle">Chat with us</div>
+        </div>
+
+    `;
+
+    document.body.appendChild(wa);
+
+});
+
+</script><meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-home-page="HOME.html" data-home-page-title="HOME" data-path-to-root="./" data-include-products="false" class="u-body u-clearfix u-xxl-mode" data-lang="en"><header class="u-clearfix u-header u-sticky u-sticky-7af7 u-header" id="header" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
+        <a href="#" class="u-image u-logo u-image-1" data-image-width="200" data-image-height="121">
+          <img src="images/nusamba-x4000-1-small.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-dropdown-icon u-menu u-menu-dropdown u-offcanvas u-menu-1" role="navigation" aria-label="Menu navigation">
+          <div class="menu-collapse u-custom-font" style="font-size: 1rem; letter-spacing: -1px; font-family: &quot;DM Sans&quot;; font-weight: 500;">
+            <a class="u-button-style u-custom-border-radius u-custom-custom-border-radius u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-hamburger-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#" tabindex="-1" aria-label="Open menu" aria-controls="9e03">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul role="menubar" class="u-custom-font u-nav u-spacing-0 u-unstyled u-nav-1"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-radius u-text-active-grey-40 u-text-custom-color-3 u-text-hover-custom-color-8 u-nav-popup-1" href="./">Home</a>
+</li><li role="none" class="u-nav-item"><a tabindex="-1" role="menuitem" class="u-button-style u-nav-link u-radius u-text-active-grey-40 u-text-custom-color-3 u-text-hover-custom-color-8 u-nav-popup-1" aria-haspopup="true">Tentang Kami</a><div class="u-nav-popup u-nav-popup-1"><ul role="menu" class="u-custom-font u-h-spacing-25 u-nav u-radius u-unstyled u-v-spacing-20 u-nav-2" aria-label="Tentang Kami menu"><li role="none" class="u-nav-item"><a role="menuitem" class="u-active-grey-15 u-button-style u-grey-5 u-hover-custom-color-8 u-nav-link u-text-active-grey-30 u-text-custom-color-3 u-text-hover-custom-color-3" href="TENTANG-sjrh-visimisi-nilai.html">Sejarah, Visi Misi, Nilai Budaya</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-active-grey-15 u-button-style u-grey-5 u-hover-custom-color-8 u-nav-link u-text-active-grey-30 u-text-custom-color-3 u-text-hover-custom-color-3" href="TENTANG-strktr-mrkt-awrd.html">Struktur Organisasi, Marketing, Award</a>
+</li></ul>
+</div>
+</li><li role="none" class="u-nav-item"><a tabindex="-1" role="menuitem" class="u-button-style u-nav-link u-radius u-text-active-grey-40 u-text-custom-color-3 u-text-hover-custom-color-8 u-nav-popup-1" aria-haspopup="true">Produk &amp; Layanan</a><div class="u-nav-popup"><ul role="menu" class="u-custom-font u-h-spacing-25 u-nav u-radius u-unstyled u-v-spacing-20 u-nav-3" aria-label="Produk &amp; Layanan menu"><li role="none" class="u-nav-item"><a role="menuitem" class="u-active-grey-15 u-button-style u-grey-5 u-hover-custom-color-8 u-nav-link u-text-active-grey-30 u-text-custom-color-3 u-text-hover-custom-color-3" href="LAYANAN-kredit.html">Kredit</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-active-grey-15 u-button-style u-grey-5 u-hover-custom-color-8 u-nav-link u-text-active-grey-30 u-text-custom-color-3 u-text-hover-custom-color-3" href="LAYANAN-tabungan.html">Tabungan</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-active-grey-15 u-button-style u-grey-5 u-hover-custom-color-8 u-nav-link u-text-active-grey-30 u-text-custom-color-3 u-text-hover-custom-color-3" href="LAYANAN-deposito.html">Deposito</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-active-grey-15 u-button-style u-grey-5 u-hover-custom-color-8 u-nav-link u-text-active-grey-30 u-text-custom-color-3 u-text-hover-custom-color-3" href="LAYANAN-layanan-UMKM.html">Layanan Pelatihan UMKM</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-active-grey-15 u-button-style u-grey-5 u-hover-custom-color-8 u-nav-link u-text-active-grey-30 u-text-custom-color-3 u-text-hover-custom-color-3" href="LAYANAN-layanan-digital.html">Layanan Digital</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-active-grey-15 u-button-style u-grey-5 u-hover-custom-color-8 u-nav-link u-text-active-grey-30 u-text-custom-color-3 u-text-hover-custom-color-3" href="LAYANAN-layanan-kemitraan.html">Layanan Kemitraan</a>
+</li></ul>
+</div>
+</li><li role="none" class="u-nav-item"><a tabindex="-1" role="menuitem" class="u-button-style u-nav-link u-radius u-text-active-grey-40 u-text-custom-color-3 u-text-hover-custom-color-8 u-nav-popup-1">Media &amp; Informasi</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-radius u-text-active-grey-40 u-text-custom-color-3 u-text-hover-custom-color-8 u-nav-popup-1" href="KARIR.html">Karir</a>
+</li><li role="none" class="u-nav-item"><a tabindex="-1" role="menuitem" class="u-button-style u-nav-link u-radius u-text-active-grey-40 u-text-custom-color-3 u-text-hover-custom-color-8 u-nav-popup-1">Marketing</a>
+</li><li role="none" class="u-nav-item"><a tabindex="-1" role="menuitem" class="u-button-style u-nav-link u-radius u-text-active-grey-40 u-text-custom-color-3 u-text-hover-custom-color-8 u-nav-popup-1" aria-haspopup="true">Publikasi</a><div class="u-nav-popup"><ul role="menu" class="u-custom-font u-h-spacing-25 u-nav u-radius u-unstyled u-v-spacing-20 u-nav-4" aria-label="Publikasi menu"><li role="none" class="u-nav-item"><a role="menuitem" class="u-active-grey-15 u-button-style u-grey-5 u-hover-custom-color-8 u-nav-link u-text-active-grey-30 u-text-custom-color-3 u-text-hover-custom-color-3" href="PUBLIKASI-laporan-publikasi.html">Laporan Publikasi</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-active-grey-15 u-button-style u-grey-5 u-hover-custom-color-8 u-nav-link u-text-active-grey-30 u-text-custom-color-3 u-text-hover-custom-color-3" href="PUBLIKASI-laporan-GCG.html">Laporan GCG</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-active-grey-15 u-button-style u-grey-5 u-hover-custom-color-8 u-nav-link u-text-active-grey-30 u-text-custom-color-3 u-text-hover-custom-color-3" href="PUBLIKASI-laporan-RAKB.html">Laporan RAKB</a>
+</li><li role="none" class="u-nav-item"><a tabindex="-1" role="menuitem" class="u-active-grey-15 u-button-style u-grey-5 u-hover-custom-color-8 u-nav-link u-text-active-grey-30 u-text-custom-color-3 u-text-hover-custom-color-3">Lelang</a>
+</li></ul>
+</div>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link u-radius u-text-active-grey-40 u-text-custom-color-3 u-text-hover-custom-color-8 u-nav-popup-1" href="KONTAK.html">Hubungi Kami</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse" id="9e03" role="region" aria-label="Menu panel">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close" tabindex="-1" aria-label="Close menu"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-5" role="menubar"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="./">Home</a>
+</li><li role="none" class="u-nav-item"><a tabindex="-1" role="menuitem" class="u-button-style u-nav-link" aria-haspopup="true">Tentang Kami</a><div class="u-nav-popup"><ul role="menu" class="u-custom-font u-h-spacing-25 u-nav u-radius u-unstyled u-v-spacing-20 u-nav-6" aria-label="Tentang Kami menu"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="TENTANG-sjrh-visimisi-nilai.html">Sejarah, Visi Misi, Nilai Budaya</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="TENTANG-strktr-mrkt-awrd.html">Struktur Organisasi, Marketing, Award</a>
+</li></ul>
+</div>
+</li><li role="none" class="u-nav-item"><a tabindex="-1" role="menuitem" class="u-button-style u-nav-link" aria-haspopup="true">Produk &amp; Layanan</a><div class="u-nav-popup"><ul role="menu" class="u-custom-font u-h-spacing-25 u-nav u-radius u-unstyled u-v-spacing-20 u-nav-7" aria-label="Produk &amp; Layanan menu"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="LAYANAN-kredit.html">Kredit</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="LAYANAN-tabungan.html">Tabungan</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="LAYANAN-deposito.html">Deposito</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="LAYANAN-layanan-UMKM.html">Layanan Pelatihan UMKM</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="LAYANAN-layanan-digital.html">Layanan Digital</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="LAYANAN-layanan-kemitraan.html">Layanan Kemitraan</a>
+</li></ul>
+</div>
+</li><li role="none" class="u-nav-item"><a tabindex="-1" role="menuitem" class="u-button-style u-nav-link">Media &amp; Informasi</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="KARIR.html">Karir</a>
+</li><li role="none" class="u-nav-item"><a tabindex="-1" role="menuitem" class="u-button-style u-nav-link">Marketing</a>
+</li><li role="none" class="u-nav-item"><a tabindex="-1" role="menuitem" class="u-button-style u-nav-link" aria-haspopup="true">Publikasi</a><div class="u-nav-popup"><ul role="menu" class="u-custom-font u-h-spacing-25 u-nav u-radius u-unstyled u-v-spacing-20 u-nav-8" aria-label="Publikasi menu"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="PUBLIKASI-laporan-publikasi.html">Laporan Publikasi</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="PUBLIKASI-laporan-GCG.html">Laporan GCG</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="PUBLIKASI-laporan-RAKB.html">Laporan RAKB</a>
+</li><li role="none" class="u-nav-item"><a tabindex="-1" role="menuitem" class="u-button-style u-nav-link">Lelang</a>
+</li></ul>
+</div>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="KONTAK.html">Hubungi Kami</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div><style class="u-sticky-style" data-style-id="7af7">.u-sticky-fixed.u-sticky-7af7, .u-body.u-sticky-fixed .u-sticky-7af7 {
+background-color: #ffffff !important; background-image: none !important
+}.u-sticky-fixed.u-sticky-7af7:before, .u-body.u-sticky-fixed .u-sticky-7af7:before {
+background-color: unset !important
+} .u-sticky-fixed.u-sticky-7af7 .u-background-video, .u-body.u-sticky-fixed .u-sticky-7af7 .u-background-video {
+display: none !important
+}</style></header>
+    <section class="u-carousel u-slide u-block-1efc-1" id="carousel-0900" data-interval="5000" data-u-ride="carousel">
+      <ol class="u-absolute-hcenter u-carousel-indicators u-block-1efc-2">
+        <li data-u-target="#carousel-0900" class="u-active u-grey-30 u-shape-circle" style="width: 10px; height: 10px;" data-u-slide-to="0"></li>
+        <li data-u-target="#carousel-0900" class="u-grey-30 u-shape-circle" style="width: 10px; height: 10px;" data-u-slide-to="1"></li>
+      </ol>
+      <div class="u-carousel-inner" role="listbox">
+        <div class="u-active u-carousel-item u-clearfix u-image u-section-1-1" data-image-width="2752" data-image-height="1536">
+          <div class="u-clearfix u-sheet u-sheet-1">
+            <div class="u-container-style u-gradient u-group u-radius u-group-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="400">
+              <div class="u-container-layout u-container-layout-1">
+                <h1 class="u-text u-text-custom-color-3 u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="800"> Memobilisasi&nbsp;<br>Dana <span class="u-text-custom-color-10">Masyarakat</span>
+                </h1>
+                <h3 class="u-custom-font u-text u-text-default u-text-grey-50 u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="1000"> guna meningkatkan taraf hidup khususnya tingkat perekonomian yang berbeda di pedesaan.</h3>
+                <div class="u-border-1 u-border-custom-color-3 u-radius u-shape u-shape-round u-shape-1"></div>
+                <a href="" class="u-border-0 u-btn u-btn-round u-button-style u-custom-color-3 u-custom-font u-hover-custom-color-10 u-hover-feature u-radius u-text-hover-white u-btn-1">Learn More </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-carousel-item u-clearfix u-image u-section-1-2" data-image-width="1920" data-image-height="1280">
+          <div class="u-clearfix u-sheet u-sheet-1">
+            <div class="u-container-style u-gradient u-group u-radius u-group-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="400">
+              <div class="u-container-layout u-container-layout-1">
+                <h1 class="u-text u-text-custom-color-3 u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="800"> Dana Aman, Usaha <span class="u-text-custom-color-8">Lancar</span>
+                </h1>
+                <h3 class="u-custom-font u-text u-text-default u-text-grey-50 u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="1000"> Kepercayaan Anda adalah amanah bagi kami untuk terus memberikan pelayanan finansial terbaik dan terpercaya. Percayakan masa depan finansial Anda bersama kami demi terwujudnya taraf hidup yang lebih baik.</h3>
+                <div class="u-border-1 u-border-custom-color-3 u-radius u-shape u-shape-round u-shape-1"></div>
+                <a href="" class="u-border-0 u-btn u-btn-round u-button-style u-custom-color-3 u-custom-font u-hover-custom-color-10 u-hover-feature u-radius u-text-hover-white u-btn-1">Learn More </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-text-grey-30 u-block-1efc-3" href="#carousel-0900" role="button" data-u-slide="prev"><span aria-hidden="true">
+          <svg class="u-svg-link" viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+                    c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path></svg></span><span class="sr-only">Previous</span>
+      </a>
+      <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-text-grey-30 u-block-1efc-4" href="#carousel-0900" role="button" data-u-slide="next"><span aria-hidden="true">
+          <svg class="u-svg-link" viewBox="0 0 477.175 477.175"><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+                    c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path></svg></span><span class="sr-only">Next</span>
+      </a>
+      
+      
+    </section>
+    <section class="u-clearfix u-section-2" id="block-11">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-align-center u-custom-font u-text u-text-custom-color-3 u-text-1">Produk &amp; ​Layanan Kami</h2>
+        <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-20 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-col">
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-hover-feature u-layout-cell u-radius u-shape-round u-size-20 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="200">
+                    <div class="u-border-1 u-border-color-var u-container-layout u-valign-top-xl u-container-layout-1">
+                      <img class="u-align-center u-image u-image-default u-preserve-proportions u-image-1" src="images/NUSAMBA-LAYANAN-KREDIT-23x.png" alt="" data-image-width="229" data-image-height="229">
+                      <div class="custom-expanded u-container-style u-gradient u-group u-radius u-shape-round u-group-1">
+                        <div class="u-container-layout u-container-layout-2">
+                          <h3 class="u-align-center u-custom-font u-text u-text-custom-color-3 u-text-2"> Kredit</h3>
+                          <p class="u-custom-font u-text u-text-grey-70 u-text-3"> Fasilitas pinjaman yang diberikan oleh BPR kepada nasabah, terutama untuk keperluan produktif seperti modal usaha atau konsumtif</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-hover-feature u-layout-cell u-radius u-shape-round u-size-20 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="400">
+                    <div class="u-border-1 u-border-color-var u-container-layout u-valign-bottom-xl u-container-layout-3">
+                      <img class="u-align-center u-image u-image-default u-preserve-proportions u-image-2" src="images/NUSAMBA-LAYANAN-TABUNGAN-23x.png" alt="" data-image-width="228" data-image-height="229">
+                      <div class="custom-expanded u-container-style u-gradient u-group u-radius u-shape-round u-group-2">
+                        <div class="u-container-layout u-container-layout-4">
+                          <h3 class="u-align-center u-custom-font u-text u-text-custom-color-3 u-text-4"> Tabungan</h3>
+                          <p class="u-custom-font u-text u-text-grey-70 u-text-5"> Simpanan uang di bank yang dapat digunakan untuk keperluan masa depan atau transaksi sehari-hari.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-hover-feature u-layout-cell u-radius u-shape-round u-size-20 u-layout-cell-3" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="600">
+                    <div class="u-border-1 u-border-color-var u-container-layout u-valign-bottom-xl u-container-layout-5">
+                      <img class="u-align-center u-image u-image-default u-preserve-proportions u-image-3" src="images/NUSAMBA-LAYANAN-DEPOSITO-23x.png" alt="" data-image-width="229" data-image-height="229">
+                      <div class="custom-expanded u-container-style u-gradient u-group u-radius u-shape-round u-group-3">
+                        <div class="u-container-layout u-container-layout-6">
+                          <h3 class="u-align-center u-custom-font u-text u-text-custom-color-3 u-text-6"> Deposito</h3>
+                          <p class="u-custom-font u-text u-text-grey-70 u-text-7"> Simpanan berjangka di bank yang menawarkan suku bunga lebih tinggi dibanding tabungan biasa.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-hover-feature u-layout-cell u-radius u-shape-round u-size-20 u-layout-cell-4" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="600">
+                    <div class="u-border-1 u-border-color-var u-container-layout u-valign-bottom-xl u-container-layout-7">
+                      <img class="u-align-center u-image u-image-default u-preserve-proportions u-image-4" src="images/NUSAMBA-LAYANAN-PELATIHAN-23x.png" alt="" data-image-width="229" data-image-height="229">
+                      <div class="custom-expanded u-container-style u-gradient u-group u-radius u-shape-round u-group-4">
+                        <div class="u-container-layout u-container-layout-8">
+                          <h3 class="u-align-center u-custom-font u-text u-text-custom-color-3 u-text-8"> Layanan Pelatihan UMKM</h3>
+                          <p class="u-custom-font u-text u-text-grey-70 u-text-9"> Pelatihan mencakup manajemen keuangan, strategi pemasaran, digitalisasi bisnis, akses permodalan, kualitas produk dan layanan.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-hover-feature u-layout-cell u-radius u-shape-round u-size-20 u-layout-cell-5" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="400">
+                    <div class="u-border-1 u-border-color-var u-container-layout u-valign-bottom-xl u-container-layout-9">
+                      <img class="u-align-center u-image u-image-default u-preserve-proportions u-image-5" src="images/NUSAMBA-LAYANAN-DIGITAL-23x.png" alt="" data-image-width="228" data-image-height="229">
+                      <div class="custom-expanded u-container-style u-gradient u-group u-radius u-shape-round u-group-5">
+                        <div class="u-container-layout u-container-layout-10">
+                          <h3 class="u-align-center u-text u-text-custom-color-3 u-text-10"> Layanan Digital</h3>
+                          <p class="u-custom-font u-text u-text-grey-70 u-text-11"> Layanan mencakup online banking, pembayaran virtual account, e-wallet integration, hingga pengajuan kredit online.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-hover-feature u-layout-cell u-radius u-shape-round u-size-20 u-layout-cell-6" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="200">
+                    <div class="u-border-1 u-border-color-var u-container-layout u-valign-bottom-xl u-container-layout-11">
+                      <img class="u-align-center u-image u-image-default u-preserve-proportions u-image-6" src="images/NUSAMBA-LAYANAN-KEMITRAAN-23x.png" alt="" data-image-width="229" data-image-height="229">
+                      <div class="custom-expanded u-container-style u-gradient u-group u-radius u-shape-round u-group-6">
+                        <div class="u-container-layout u-container-layout-12">
+                          <h3 class="u-align-center u-custom-font u-text u-text-custom-color-3 u-text-12"> Layanan Kemitraan</h3>
+                          <p class="u-custom-font u-text u-text-grey-70 u-text-13"> Kerja sama kemitraan dalam CSR (Corporate Social Responsibility), sosial, pendidikan, dan bisnis.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      
+      
+    </section>
+    <section class="u-clearfix u-gradient u-section-3" id="block-8">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-align-center u-custom-font u-text u-text-body-alt-color u-text-default u-text-1"><span class="u-text-custom-color-8">Lorem&nbsp;</span>Ipsum Dolor Sit Amet
+        </h2>
+        <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-20 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-hover-feature u-image u-image-round u-layout-cell u-radius u-shape-round u-size-15 u-size-30-md u-image-1" data-image-width="901" data-image-height="1501" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="0">
+                <div class="u-container-layout u-valign-top-xl u-valign-top-xxl u-container-layout-1">
+                  <h3 class="u-custom-font u-text u-text-body-alt-color u-text-2">Lorem Ipsum Dolor Sit Amet-1</h3>
+                </div>
+              </div>
+              <div class="u-container-style u-hover-feature u-image u-image-round u-layout-cell u-radius u-size-15 u-size-30-md u-image-2" data-image-width="901" data-image-height="1501" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="100">
+                <div class="u-container-layout u-container-layout-2">
+                  <h3 class="u-custom-font u-text u-text-body-alt-color u-text-3"> Lorem Ipsum Dolor Sit Amet-2</h3>
+                </div>
+              </div>
+              <div class="u-container-style u-hover-feature u-image u-image-round u-layout-cell u-radius u-size-15 u-size-30-md u-image-3" data-image-width="901" data-image-height="1501" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="200">
+                <div class="u-container-layout u-container-layout-3">
+                  <h3 class="u-custom-font u-text u-text-body-alt-color u-text-4"> Lorem Ipsum Dolor Sit Amet-3</h3>
+                </div>
+              </div>
+              <div class="u-container-style u-hover-feature u-image u-image-round u-layout-cell u-radius u-size-15 u-size-30-md u-image-4" data-image-width="901" data-image-height="1501" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="300">
+                <div class="u-container-layout u-container-layout-4">
+                  <h3 class="u-custom-font u-text u-text-body-alt-color u-text-5"> Lorem Ipsum Dolor Sit Amet-4</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+    </section>
+    <section class="u-clearfix u-gradient u-image u-section-4" id="block-5" data-image-width="2536" data-image-height="1478">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-align-left u-custom-font u-text u-text-custom-color-3 u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="800"> Tingkat Bunga Penjaminan BPR</h2>
+        <h4 class="u-align-left u-custom-font u-text u-text-grey-60 u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="1000"> Periode: 01 Oktober 2025 s/d 31 Januari 2026</h4>
+        <div class="u-border-1 u-border-custom-color-3 u-radius u-shape u-shape-round u-shape-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="400"></div>
+        <div class="u-container-style u-gradient u-group u-radius u-shape-round u-group-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="400">
+          <div class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-container-layout-1">
+            <h4 class="u-align-left u-custom-font u-text u-text-body-alt-color u-text-3"> 6.00</h4>
+            <h4 class="u-align-left u-custom-font u-text u-text-body-alt-color u-text-4">IDR</h4>
+            <h4 class="u-align-left u-custom-font u-text u-text-body-alt-color u-text-5">%</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-5" id="block-9">
+      <div class="custom-expanded u-container-style u-gradient u-group u-radius u-shape-round u-group-1">
+        <div class="u-container-layout u-container-layout-1">
+          <h2 class="u-align-center u-custom-font u-text u-text-body-alt-color u-text-default u-text-1"><span class="u-text-custom-color-8">Keuntungan </span>Bergabung Bersama BPR Nusamba
+          </h2>
+          <div class="custom-expanded data-layout-selected u-clearfix u-gutter-20 u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout">
+              <div class="u-layout-row">
+                <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-radius u-shape-round u-size-30 u-white u-layout-cell-1">
+                  <div class="u-container-layout u-container-layout-2">
+                    <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/TERBESAR3x.png" alt="" data-image-width="350" data-image-height="350">
+                    <h3 class="u-custom-font u-text u-text-custom-color-3 u-text-2">Terbesar dan Terpercaya</h3>
+                  </div>
+                </div>
+                <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-radius u-shape-round u-size-30 u-white u-layout-cell-2">
+                  <div class="u-container-layout u-container-layout-3">
+                    <img class="u-image u-image-default u-preserve-proportions u-image-2" src="images/PROSESCEPAT3x.png" alt="" data-image-width="350" data-image-height="309">
+                    <h3 class="u-custom-font u-text u-text-custom-color-3 u-text-3">Proses Cepat</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-gradient u-image u-section-6" id="block-19" data-image-width="4431" data-image-height="1725">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-align-center u-custom-font u-text u-text-custom-color-3 u-text-1">Jaringan kami</h2>
+        <div class="u-clearfix u-group-elements u-group-elements-1">
+          <div class="u-border-1 u-border-custom-color-3 u-radius u-shape u-shape-round u-shape-1"></div>
+          <a href="" class="u-border-0 u-btn u-btn-round u-button-style u-custom-color-3 u-custom-font u-hover-custom-color-10 u-hover-feature u-radius u-text-hover-white u-btn-1">Selengkapnya </a>
+        </div>
+      </div>
+      
+    </section>
+    <section class="u-clearfix u-grey-5 u-section-7" id="block-13">
+      <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
+        <div class="u-container-style u-expanded-width u-group u-radius u-uploaded-video u-video u-video-cover u-video-1" data-href="https://www.youtube.com/watch?v=8VwirZOIkyE">
+          <div class="u-absolute-hcenter u-background-video u-expanded" style="">
+            <div class="embed-responsive">
+              <video class="embed-responsive-item" data-autoplay="1" loop="" muted="1" poster="images/NUSAMBA-videoimage.jpg" autoplay="autoplay" playsinline="">
+                <source src="files/CompanyProfilBPRNusambaCepiring2020_720p.mp4" type="video/mp4">
+                <p>Your browser does not support HTML5 video.</p>
+              </video>
+            </div>
+            <div class="u-video-shading"></div>
+          </div>
+          <div class="u-container-layout u-container-layout-1"></div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-grey-5 u-section-8" id="block-15">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h4 class="u-custom-font u-text u-text-custom-color-8 u-text-1">Video Company Profile</h4>
+        <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-20 u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-shape-rectangle u-size-22 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="200">
+                <div class="u-container-layout u-container-layout-1">
+                  <h3 class="u-align-left u-text u-text-custom-color-3 u-text-default u-text-2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-shape-rectangle u-size-16 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2"></div>
+              </div>
+              <div class="u-container-style u-layout-cell u-shape-rectangle u-size-22 u-layout-cell-3" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="200">
+                <div class="u-container-layout u-container-layout-3">
+                  <p class="u-align-left u-custom-font u-text u-text-default u-text-grey-70 u-text-3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&nbsp;</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-9" id="block-16">
+      <div class="u-clearfix u-sheet u-valign-middle-xl u-valign-middle-xxl u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-24 u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+              <div class="u-size-30-sm u-size-30-xs u-size-37-lg u-size-37-xl u-size-37-xxl u-size-60-md">
+                <div class="u-layout-col">
+                  <div class="u-size-30">
+                    <div class="u-layout-row">
+                      <div class="u-container-style u-hover-feature u-layout-cell u-radius u-size-30 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="400">
+                        <div class="u-border-1 u-border-custom-color-3 u-container-layout u-container-layout-1">
+                          <img class="custom-expanded u-image u-image-round u-radius u-image-1" src="images/Gemini_Generated_Image_9kthqj9kthqj9kth1.png" alt="" data-image-width="1200" data-image-height="896">
+                          <h5 class="u-align-left u-text u-text-1">Lorem Ipsum Headline</h5>
+                          <p class="u-text u-text-2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                      </div>
+                      <div class="u-container-style u-hover-feature u-layout-cell u-radius u-size-30 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="200">
+                        <div class="u-border-1 u-border-custom-color-3 u-container-layout u-container-layout-2">
+                          <img class="custom-expanded u-image u-image-round u-radius u-image-2" src="images/Gemini_Generated_Image_andxtlandxtlandx.jpg" alt="" data-image-width="2400" data-image-height="1792">
+                          <h5 class="u-align-left u-text u-text-3">Lorem Ipsum Headline</h5>
+                          <p class="u-text u-text-4"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-size-30">
+                    <div class="u-layout-row">
+                      <div class="u-container-style u-hover-feature u-layout-cell u-radius u-size-30 u-layout-cell-3" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="500">
+                        <div class="u-border-1 u-border-custom-color-3 u-container-layout u-container-layout-3">
+                          <img class="custom-expanded u-image u-image-round u-radius u-image-3" src="images/Gemini_Generated_Image_9kthqj9kthqj9kth2.png" alt="" data-image-width="1200" data-image-height="896">
+                          <h5 class="u-text u-text-5">Lorem Ipsum Headline</h5>
+                          <p class="u-text u-text-6"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                      </div>
+                      <div class="u-container-style u-hover-feature u-layout-cell u-radius u-size-30 u-layout-cell-4" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="300">
+                        <div class="u-border-1 u-border-custom-color-3 u-container-layout u-container-layout-4">
+                          <img class="custom-expanded u-image u-image-round u-radius u-image-4" src="images/Gemini_Generated_Image_9kthqj9kthqj9kth4.png" alt="" data-image-width="1200" data-image-height="896">
+                          <h5 class="u-text u-text-7">Lorem Ipsum Headline</h5>
+                          <p class="u-text u-text-8"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-23-lg u-size-23-xl u-size-23-xxl u-size-30-sm u-size-30-xs u-size-60-md">
+                <div class="u-layout-col">
+                  <div class="u-container-style u-layout-cell u-shape-rectangle u-size-60 u-layout-cell-5">
+                    <div class="u-container-layout u-container-layout-5">
+                      <h2 class="u-align-left u-custom-font u-text u-text-custom-color-3 u-text-9">Promo Hari Ini</h2>
+                      <p class="u-align-left u-custom-font u-text u-text-grey-70 u-text-10"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&nbsp;</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+    </section>
+    <section class="u-align-center u-clearfix u-container-align-center u-gradient u-image u-valign-top-lg u-valign-top-md u-section-10" id="block-18" data-image-width="2400" data-image-height="812">
+      <div id="carousel-32d8" data-interval="3000" data-u-ride="carousel" class="u-carousel u-slider u-slider-1">
+        <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
+          <li data-u-target="#carousel-32d8" class="u-active u-grey-30" data-u-slide-to="0"></li>
+          <li data-u-target="#carousel-32d8" class="u-grey-30" data-u-slide-to="1"></li>
+          <li data-u-target="#carousel-32d8" class="u-grey-30" data-u-slide-to="2"></li>
+        </ol>
+        <div class="u-carousel-inner" role="listbox">
+          <div class="custom-expanded u-active u-align-center u-carousel-item u-container-align-center u-container-style u-shape-rectangle u-slide u-carousel-item-1">
+            <div class="u-container-layout u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xl u-valign-top-xs u-container-layout-1">
+              <div class="u-absolute-hcenter u-expanded u-radius u-shape u-shape-round u-white u-shape-1"></div>
+              <div alt="" class="u-image u-image-circle u-image-1" data-image-width="1429" data-image-height="1913"></div>
+              <p class="u-align-center u-custom-font u-font-dm-sans u-large-text u-text u-text-variant u-text-1">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+              <h4 class="u-align-center u-text u-text-2">Reviewer Name 1</h4>
+              <h6 class="u-align-center u-text u-text-3">Chief Accountant</h6>
+            </div>
+          </div>
+          <div class="custom-expanded u-align-center u-carousel-item u-container-align-center u-container-style u-shape-rectangle u-slide">
+            <div class="u-container-layout u-valign-top u-container-layout-2">
+              <div class="u-absolute-hcenter u-expanded u-radius u-shape u-shape-round u-white u-shape-2"></div>
+              <div alt="" class="u-image u-image-circle u-image-2" data-image-width="1429" data-image-height="1913"></div>
+              <p class="u-align-center u-custom-font u-font-dm-sans u-large-text u-text u-text-variant u-text-4">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+              <h4 class="u-align-center u-text u-text-5"> Reviewer Name 2</h4>
+              <h6 class="u-align-center u-custom-font u-font-dm-sans u-text u-text-6">Director </h6>
+            </div>
+          </div>
+          <div class="custom-expanded u-align-center u-carousel-item u-container-align-center u-container-style u-shape-rectangle u-slide">
+            <div class="u-container-layout u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xl u-valign-top-xs u-container-layout-3">
+              <div class="u-absolute-hcenter u-expanded u-radius u-shape u-shape-round u-white u-shape-3"></div>
+              <div alt="" class="u-image u-image-circle u-image-3" data-image-width="1430" data-image-height="1914"></div>
+              <p class="u-align-center u-custom-font u-font-dm-sans u-large-text u-text u-text-variant u-text-7">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+              <h4 class="u-align-center u-text u-text-8"> Reviewer Name 3</h4>
+              <h6 class="u-align-center u-custom-font u-font-dm-sans u-text u-text-9">Chief Accountant</h6>
+            </div>
+          </div>
+        </div>
+        <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-5 u-spacing-13 u-text-grey-30 u-carousel-control-1" href="#carousel-32d8" role="button" data-u-slide="prev"><span aria-hidden="true">
+            <svg viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+		c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path></svg></span><span class="sr-only">
+            <svg viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+		c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path></svg></span>
+        </a>
+        <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-grey-5 u-spacing-13 u-text-grey-30 u-carousel-control-2" href="#carousel-32d8" role="button" data-u-slide="next"><span aria-hidden="true">
+            <svg viewBox="0 0 477.175 477.175"><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+		c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path></svg></span><span class="sr-only">
+            <svg viewBox="0 0 477.175 477.175"><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+		c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path></svg></span>
+        </a>
+      </div>
+      <h2 class="u-align-left u-custom-font u-text u-text-body-alt-color u-text-10" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="200">Testimoni</h2>
+    </section>
+    <section class="u-clearfix u-section-11" id="block-6">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-align-center u-custom-font u-text u-text-custom-color-3 u-text-default u-text-1"> Mitra Terbaik Kami</h2>
+        <div class="custom-expanded data-layout-selected u-clearfix u-gutter-10 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-size-15 u-size-30-md u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="800">
+                <div class="u-container-layout u-valign-middle-xl u-valign-middle-xxl u-container-layout-1">
+                  <img class="u-image u-image-contain u-image-default u-image-1" src="images/LogoSMHUtama.png" alt="" data-image-width="2126" data-image-height="556">
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-size-15 u-size-30-md u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="600">
+                <div class="u-container-layout u-valign-middle-xl u-valign-middle-xxl u-container-layout-2">
+                  <img class="u-image u-image-contain u-image-default u-image-2" src="images/TelkomSigma.webp" alt="" data-image-width="3690" data-image-height="1087">
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-size-15 u-size-30-md u-layout-cell-3" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="400">
+                <div class="u-container-layout u-valign-middle-xl u-valign-middle-xxl u-container-layout-3">
+                  <img class="u-image u-image-contain u-image-default u-image-3" src="images/Bank_Mandiri_logo_2016.svg.png" alt="" data-image-width="3840" data-image-height="1121">
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-size-15 u-size-30-md u-layout-cell-4" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="200">
+                <div class="u-container-layout u-valign-middle-xl u-valign-middle-xxl u-container-layout-4">
+                  <img class="u-image u-image-contain u-image-default u-image-4" src="images/Bank-BPD-Balicopy.png" alt="" data-image-width="745" data-image-height="196">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    <footer class="u-clearfix u-footer u-gradient u-image u-footer" id="footer" data-image-width="167" data-image-height="150"><div class="u-clearfix u-sheet u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-expanded-width-xs u-gutter-20 u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout" style="">
+            <div class="u-layout-col" style="">
+              <div class="u-size-30" style="">
+                <div class="u-layout-row" style="">
+                  <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-shape-rectangle u-size-23 u-layout-cell-1">
+                    <div class="u-container-layout u-container-layout-1">
+                      <a href="#" class="u-image u-logo u-image-1" data-image-width="200" data-image-height="121">
+                        <img src="images/nusamba-x4000-1-small.png" class="u-logo-image u-logo-image-1">
+                      </a>
+                      <div class="u-container-style u-group u-hover-feature u-radius u-shading u-group-1">
+                        <div class="u-container-layout u-container-layout-2">
+                          <div class="u-clearfix u-group-elements u-group-elements-1">
+                            <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-2" src="images/WHISTLEBLOWERicon.png" alt="" data-image-width="550" data-image-height="420">
+                          </div>
+                          <p class="u-text u-text-default u-text-1">Whistleblowing System</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-shape-rectangle u-size-15 u-layout-cell-2">
+                    <div class="u-container-layout u-container-layout-3"><!--position-->
+                      <div data-position="" class="u-position u-position-1"><!--block-->
+                        <div class="u-block">
+                          <div class="u-block-container u-clearfix"><!--block_content-->
+                            <div class="u-block-content u-text u-text-2"><!--block_content_content--><!--/block_content_content--></div><!--/block_content-->
+                          </div>
+                        </div><!--/block-->
+                      </div><!--/position-->
+                      <div class="custom-expanded u-list u-list-1">
+                        <div class="u-repeater u-repeater-1">
+                          <div class="u-container-style u-list-item u-repeater-item u-list-item-1">
+                            <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-4">
+                              <p class="u-custom-font u-hover-feature u-text u-text-custom-color-3 u-text-default u-text-3">profile</p>
+                            </div>
+                          </div>
+                          <div class="u-container-style u-list-item u-repeater-item u-list-item-2">
+                            <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-5">
+                              <p class="u-custom-font u-hover-feature u-text u-text-custom-color-3 u-text-default u-text-4">Galery</p>
+                            </div>
+                          </div>
+                          <div class="u-container-style u-list-item u-repeater-item u-list-item-3">
+                            <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-6">
+                              <p class="u-custom-font u-hover-feature u-text u-text-custom-color-3 u-text-default u-text-5">produk</p>
+                            </div>
+                          </div>
+                          <div class="u-container-style u-list-item u-repeater-item u-list-item-4">
+                            <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-7">
+                              <p class="u-custom-font u-hover-feature u-text u-text-custom-color-3 u-text-default u-text-6">marketing</p>
+                            </div>
+                          </div>
+                          <div class="u-container-style u-list-item u-repeater-item u-list-item-5">
+                            <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-8">
+                              <p class="u-custom-font u-hover-feature u-text u-text-custom-color-3 u-text-default u-text-7"> Media &amp; Informasi</p>
+                            </div>
+                          </div>
+                          <div class="u-container-style u-list-item u-repeater-item u-list-item-6">
+                            <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-9">
+                              <p class="u-custom-font u-hover-feature u-text u-text-custom-color-3 u-text-default u-text-8">contact</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-shape-rectangle u-size-22 u-layout-cell-3">
+                    <div class="u-container-layout u-container-layout-10">
+                      <p class="u-custom-font u-text u-text-custom-color-3 u-text-9"></p>
+                      <div class="custom-expanded u-list u-list-2">
+                        <div class="u-repeater u-repeater-2">
+                          <div class="u-container-style u-list-item u-repeater-item">
+                            <div class="u-container-layout u-similar-container u-container-layout-11"><span class="u-icon u-icon-circle u-palette-1-base u-text-white u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 98.81 98.8" style=""><use xlink:href="#svg-97bc"></use></svg><svg class="u-svg-content" viewBox="0 0 98.81 98.8" id="svg-97bc"><defs><style> .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #1b75bc;
+      } </style>
+</defs><g id="Layer_1-2"><g><path class="cls-2" d="M1.11,39.09C3.86,26.19,11.47,15.13,22.54,7.96,33.61.79,46.81-1.65,59.71,1.11c12.9,2.75,23.96,10.37,31.13,21.44,7.17,11.07,9.61,24.27,6.85,37.17-2.75,12.9-10.37,23.96-21.44,31.13-11.07,7.17-24.27,9.61-37.17,6.85-12.9-2.75-23.96-10.37-31.13-21.44C.79,65.19-1.65,51.99,1.11,39.09Z"></path><g><path class="cls-1" d="M49.4,77.55c6.28-7.93,12.57-15.85,18.85-23.78,6.76-8.53,7.2-20.56.85-29.4-.1-.14-.2-.28-.31-.42-.07-.09-.14-.19-.21-.28-9.7-12.62-28.65-12.62-38.36,0-.07.09-.14.19-.21.28-.1.14-.21.28-.31.42-6.35,8.85-5.91,20.87.85,29.4,6.28,7.93,12.57,15.85,18.85,23.78ZM49.4,25.22c6.54,0,11.84,5.3,11.84,11.84s-5.3,11.84-11.84,11.84-11.84-5.3-11.84-11.84,5.3-11.84,11.84-11.84Z"></path><path class="cls-1" d="M61.73,69.66l-2.74,3.46c1.97.24,3.8.57,5.44.96,4.25,1.01,5.74,2.17,6.01,2.6-.27.43-1.76,1.58-6.01,2.6-3.21.77-7.19,1.26-11.46,1.44-1.17.05-2.37.07-3.57.07s-2.4-.02-3.57-.07c-4.26-.18-8.24-.68-11.46-1.44-4.25-1.01-5.74-2.17-6.01-2.6.27-.43,1.76-1.58,6.01-2.6,1.63-.39,3.47-.71,5.44-.96l-2.74-3.46c-6.68,1.06-12.55,3.17-12.55,7.01,0,6.15,15.1,7.87,24.39,7.93.17,0,.33,0,.49,0s.33,0,.49,0c9.29-.06,24.39-1.78,24.39-7.93,0-3.84-5.88-5.95-12.55-7.01Z"></path>
+</g>
+</g>
+</g></svg></span>
+                              <p class="u-custom-font u-text u-text-custom-color-3 u-text-default u-text-10">
+                                <a href="https://nusambacepiring.com/#" class="u-active-none u-border-none u-btn u-button-link u-button-style u-custom-font u-hover-none u-none u-text-palette-1-base u-btn-1">Jl. Raya Gondang No.30, Gondang,<br>Kec. Cepiring, Kabupaten Kendal.
+                                </a>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="u-container-style u-list-item u-repeater-item">
+                            <div class="u-container-layout u-similar-container u-container-layout-12"><span class="u-icon u-icon-circle u-palette-1-base u-text-white u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 98.77 98.77" style=""><use xlink:href="#svg-4097"></use></svg><svg class="u-svg-content" viewBox="0 0 98.77 98.77" id="svg-4097"><defs><style> .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #1b75bc;
+      } </style>
+</defs><g id="Layer_1-2"><g><path class="cls-2" d="M98.77,49.39c0,13.19-5.14,25.59-14.47,34.92-9.33,9.33-21.73,14.46-34.92,14.46s-25.59-5.14-34.92-14.46C5.14,74.98,0,62.58,0,49.39S5.14,23.79,14.46,14.46C23.79,5.14,36.19,0,49.39,0s25.59,5.14,34.92,14.46c9.33,9.33,14.47,21.73,14.47,34.92Z"></path><path class="cls-1" d="M74.43,74.49s-.03.03-.12.11c-5.65,5.23-9.35,5.54-9.61,5.5-.02,0-.03,0-.03,0,0,0,0,0,0,0-.43-.07-.84-.18-1.25-.33-5.75-2.15-18.09-7.71-28.14-20.65-9.14-11.76-11.82-23.74-12.72-29.73-.06-.42-.09-.84-.06-1.27,0,0,0,0,0,0,0,0,0-.02,0-.03.02-.26,1.08-3.81,7.36-8.27.09-.07.11-.08.13-.09,3.06-2.1,7.14-.98,8.33,2.27l3.58,9.76c.1.28.19.57.25.86.17.84.24,1.9-.14,2.98-.54,1.56-1.65,2.17-2.25,2.88-2.23,2.65.61,9.17,3.13,12.96,4.25,6.41,11.87,11.44,15.2,9.62.79-.43,1.62-1.41,3.28-1.61,1.12-.14,2.13.13,2.9.46.29.12.57.28.84.44l8.81,5.51c2.94,1.84,3.19,6.06.51,8.62Z"></path>
+</g>
+</g></svg></span>
+                              <p class="u-custom-font u-text u-text-custom-color-3 u-text-default u-text-11">
+                                <a href="https://nusambacepiring.com/#" class="u-active-none u-border-none u-btn u-button-link u-button-style u-custom-font u-hover-none u-none u-text-palette-1-base u-btn-2"> 0294382234</a>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="u-container-style u-list-item u-repeater-item">
+                            <div class="u-container-layout u-similar-container u-container-layout-13"><span class="u-icon u-icon-circle u-palette-1-base u-text-white u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 98.77 98.77" style=""><use xlink:href="#svg-3520"></use></svg><svg class="u-svg-content" viewBox="0 0 98.77 98.77" id="svg-3520"><defs><style> .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #1b75bc;
+      } </style>
+</defs><g id="Layer_1-2"><g><path class="cls-2" d="M98.77,49.39c0,13.19-5.14,25.59-14.47,34.92-9.33,9.33-21.73,14.46-34.92,14.46s-25.59-5.14-34.92-14.46C5.14,74.98,0,62.58,0,49.39S5.14,23.79,14.46,14.46C23.79,5.14,36.19,0,49.39,0s25.59,5.14,34.92,14.46c9.33,9.33,14.47,21.73,14.47,34.92Z"></path><g><polygon class="cls-1" points="81.95 36.46 81.95 62.21 66.24 49.32 81.95 36.46"></polygon><g><polygon class="cls-1" points="32.64 49.29 16.59 62.4 16.59 36.18 32.64 49.29"></polygon><path class="cls-1" d="M82.14,31.55l-19.58,16.15c-.06.05-.12.1-.18.16l-12.5,10.26-5.23-4.29-7.29-5.98h0s-.05-.05-.08-.07l-1.15-.94-18.53-15.23c.71-1.75,2.05-3.28,3.7-3.83h57.17c1.63.55,2.96,2.05,3.68,3.78Z"></path><path class="cls-1" d="M82.18,66.99c-.74,1.82-2.18,3.23-3.96,4-.08.02-.16-.02-.23-.02H21.77c-.08,0-.16.04-.24.02-1.81-.78-3.22-2.21-3.95-4.06l18.45-15.13,6.07,4.99,6.44,5.29c.25.23.56.4.9.48.14.03.29.05.43.05.45,0,.88-.15,1.24-.44l12.62-10.33,18.44,15.15Z"></path>
+</g>
+</g>
+</g>
+</g></svg></span>
+                              <p class="u-custom-font u-text u-text-custom-color-3 u-text-default u-text-12">
+                                <a href="https://nusambacepiring.com/#" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3"> info@nusambacepiring.com</a>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-size-60 u-layout-cell-4">
+                    <div class="u-container-layout u-container-layout-14">
+                      <div class="u-border-1 u-border-custom-color-3 u-expanded-width u-shape u-shape-bottom u-shape-left u-shape-line u-shape-right u-shape-1"></div>
+                      <p class="u-align-center u-custom-font u-text u-text-custom-color-3 u-text-13"> PT. BPR. Nusamba Cepiring berizin dan diawasi oleh Otoritas Jasa Keuangan (OJK) serta merupakan peserta penjaminan Lembaga Penjamin Simpanan (LPS). Maksimum nilai simpanan yang dijamin LPS per nasabah per bank adalah Rp 2 miliar. Untuk mengetahui tingkat bunga Penjaminan LPS silahkan akses&nbsp;<a href="https://apps.lps.go.id/BankPesertaLPSRate" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-4"><b>Klik Disini</b>
+                        </a>
+                      </p>
+                      <div class="u-container-align-center u-container-style u-expanded-width u-gradient u-group u-group-2">
+                        <div class="u-container-layout u-container-layout-15">
+                          <p class="u-align-center u-custom-font u-text u-text-custom-color-3 u-text-14"> Copyright © 2026. RICH-Creative All rights reserved.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div></footer>
+  
+</body></html>
