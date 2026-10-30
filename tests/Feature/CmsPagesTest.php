@@ -39,18 +39,48 @@ class CmsPagesTest extends TestCase
     public function test_published_site_pages_are_served_as_html(): void
     {
         CmsPage::create([
-            'path' => 'KONTAK.html',
+            'path' => 'custom-contact.html',
             'title' => 'Home',
             'section' => 'Kontak',
             'content' => '<!doctype html><title>Home</title>',
             'is_published' => true,
         ]);
 
-        $this->get('/KONTAK.html')
+        $this->get('/custom-contact.html')
             ->assertOk()
             ->assertHeader('content-type', 'text/html; charset=UTF-8')
             ->assertSee('/assets/css/responsive.css')
             ->assertSee('<title>Home</title>', false);
+    }
+
+    public function test_code_managed_pages_use_source_files_and_do_not_fall_back_to_stale_cms_content(): void
+    {
+        CmsPage::create([
+            'path' => 'TENTANG-sjrh-visimisi-nilai.html',
+            'title' => 'Versi CMS lama',
+            'section' => 'Tentang',
+            'content' => '<title>Versi CMS lama</title><p>Konten lama database</p>',
+            'is_published' => true,
+        ]);
+
+        $this->get('/TENTANG-sjrh-visimisi-nilai.html')
+            ->assertOk()
+            ->assertSee('mission-list')
+            ->assertDontSee('Versi CMS lama')
+            ->assertDontSee('Konten lama database');
+
+        $sourcePaths = config('cms-pages.source_paths');
+        $sourcePaths['missing-source.html'] = 'code-managed.html';
+        config(['cms-pages.source_paths' => $sourcePaths]);
+        CmsPage::create([
+            'path' => 'code-managed.html',
+            'title' => 'Versi database',
+            'section' => 'Tentang',
+            'content' => '<title>Versi database</title>',
+            'is_published' => true,
+        ]);
+
+        $this->get('/code-managed.html')->assertNotFound();
     }
 
     public function test_beranda_pages_are_served_from_their_separate_live_sources(): void
@@ -224,6 +254,12 @@ class CmsPagesTest extends TestCase
 
         $this->get('/admin')->assertRedirect(route('cms.login'));
 
+        $this->get(route('cms.login'))
+            ->assertOk()
+            ->assertSee('assets/cms-admin/css/main.css')
+            ->assertSee('name="email"', false)
+            ->assertSee('name="password"', false);
+
         $this->post(route('cms.login.submit'), [
             'email' => 'admin',
             'password' => 'admin',
@@ -232,7 +268,12 @@ class CmsPagesTest extends TestCase
         $this->get(route('cms.index'))
             ->assertOk()
             ->assertSee('Kelola konten')
-            ->assertSee('Beranda');
+            ->assertSee('Beranda')
+            ->assertSee('assets/cms-admin/css/main.css')
+            ->assertSee('assets/cms-admin/js/dashboard.js')
+            ->assertSee('id="visual-frame"', false)
+            ->assertSee('id="page-editor"', false)
+            ->assertSee('id="save-page"', false);
 
         $this->patch(route('cms.pages.update', $page), [
             'title' => 'Beranda Baru',
@@ -261,7 +302,7 @@ class CmsPagesTest extends TestCase
             ->get(route('cms.index', ['page' => $homePage->id, 'tab' => 'Beranda']))
             ->assertOk()
             ->assertSee('beranda/home.html')
-            ->assertSee('Perubahan file langsung tampil di website')
+            ->assertSee('File kode menjadi sumber utama halaman')
             ->assertDontSee('Simpan perubahan');
 
         $this->actingAsAdmin()
@@ -279,6 +320,26 @@ class CmsPagesTest extends TestCase
 
         $this->assertSame('beranda/index.html', CmsPageSource::liveSourcePathFor($indexPage->path));
         $this->assertSame('beranda/home.html', CmsPageSource::liveSourcePathFor($homePage->path));
+    }
+
+    public function test_pages_with_source_files_are_read_only_in_the_cms_editor(): void
+    {
+        $this->seed(CmsPageSeeder::class);
+        $page = CmsPage::query()->where('path', 'TENTANG-sjrh-visimisi-nilai.html')->firstOrFail();
+
+        $this->actingAsAdmin()
+            ->get(route('cms.index', ['page' => $page->id, 'tab' => 'Tentang']))
+            ->assertOk()
+            ->assertSee('tentang/sejarah-visi-misi-nilai.html')
+            ->assertSee('File kode menjadi sumber utama halaman')
+            ->assertDontSee('id="save-page"', false);
+
+        $this->actingAsAdmin()
+            ->patch(route('cms.pages.update', $page), [
+                'title' => 'Edit CMS yang tidak boleh diterapkan',
+                'content' => '<title>Konten CMS lama</title>',
+            ])
+            ->assertRedirect(route('cms.index', ['page' => $page->id, 'tab' => 'Tentang']));
     }
 
     public function test_visual_preview_and_media_upload_require_authentication(): void
@@ -312,7 +373,7 @@ class CmsPagesTest extends TestCase
             'cms.admin_password' => 'admin',
         ]);
         $page = CmsPage::create([
-            'path' => 'KONTAK.html',
+            'path' => 'custom-contact.html',
             'title' => 'Kontak',
             'section' => 'Kontak',
             'content' => '<!doctype html><html><head><title>Home</title></head><body><p>Home</p></body></html>',

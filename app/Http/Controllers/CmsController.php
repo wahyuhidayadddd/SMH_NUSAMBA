@@ -29,7 +29,7 @@ class CmsController extends Controller
 
     public function preview(CmsPage $page): Response
     {
-        $sourcePath = CmsPageSource::liveSourcePathFor($page->path);
+        $sourcePath = CmsPageSource::sourcePathForPage($page->path);
         $content = $sourcePath === null
             ? $page->content
             : CmsPageSource::read($sourcePath);
@@ -78,12 +78,12 @@ class CmsController extends Controller
 
     public function update(Request $request, CmsPage $page): RedirectResponse
     {
-        $liveSourcePath = CmsPageSource::liveSourcePathFor($page->path);
+        $liveSourcePath = CmsPageSource::sourcePathForPage($page->path);
 
         if ($liveSourcePath !== null) {
             return redirect()
                 ->route('cms.index', ['page' => $page->id, 'tab' => $page->section])
-                ->with('status', 'Halaman ini memakai sumber langsung: '.$liveSourcePath.'. Edit file tersebut untuk mengubah website.');
+                ->with('status', 'Halaman ini memakai sumber kode: '.$liveSourcePath.'. Edit file tersebut untuk mengubah website.');
         }
 
         $validated = $request->validate([
@@ -117,12 +117,12 @@ class CmsController extends Controller
 
     public function syncSource(CmsPage $page): RedirectResponse
     {
-        $liveSourcePath = CmsPageSource::liveSourcePathFor($page->path);
+        $liveSourcePath = CmsPageSource::sourcePathForPage($page->path);
 
         if ($liveSourcePath !== null) {
             return redirect()
                 ->route('cms.index', ['page' => $page->id, 'tab' => $page->section])
-                ->with('status', 'Halaman ini sudah memakai sumber langsung: '.$liveSourcePath.'.');
+                ->with('status', 'Halaman ini sudah memakai sumber kode: '.$liveSourcePath.'.');
         }
 
         $sourcePath = CmsPageSource::sourcePathFor($page->path);

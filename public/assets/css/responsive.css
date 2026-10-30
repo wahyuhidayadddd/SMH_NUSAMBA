@@ -16,6 +16,10 @@ img {
   height: auto;
 }
 
+.hero-mobile-image {
+  display: none;
+}
+
 table {
   max-width: 100%;
 }
@@ -67,6 +71,39 @@ pre {
 @keyframes page-loader-spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1024px), (pointer: coarse) {
+  .page-loader {
+    transition: none;
+  }
+
+  body:has(#carousel-0900) [data-animation-name] {
+    animation: none !important;
+    animation-delay: 0s !important;
+    animation-duration: 0s !important;
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+
+  body:has(#carousel-0900) .u-section-1-1 {
+    background-image: url('../images/Gemini_Generated_Image_kl38mpkl38mpkl38copy1-mobile.jpg') !important;
+  }
+
+  body:has(#carousel-0900) .u-section-1-2 {
+    background-image: url('../images/Gemini_Generated_Image_ei59doei59doei59-copy1-mobile.jpg') !important;
+  }
+
+  body:has(#carousel-0900) #block-18 {
+    background-image: linear-gradient(to right, rgba(25, 38, 51, 0.38), rgba(25, 38, 51, 0.2)), url('../images/Gemini_Generated_Image_qrvtixqrvtixqrvt-Photoroom-mobile.jpg') !important;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-item,
+  body:has(#carousel-0900) #carousel-32d8 .u-carousel-item {
+    animation: none !important;
+    transition: none !important;
   }
 }
 
@@ -331,6 +368,12 @@ body:has(#carousel-0900) #block-18 {
   background-image: linear-gradient(to right, rgba(25, 38, 51, 0.38), rgba(25, 38, 51, 0.2)), url('../images/Gemini_Generated_Image_qrvtixqrvtixqrvt-Photoroom.png') !important;
 }
 
+@media (max-width: 1024px), (pointer: coarse) {
+  body:has(#carousel-0900) #block-18 {
+    background-image: linear-gradient(to right, rgba(25, 38, 51, 0.38), rgba(25, 38, 51, 0.2)), url('../images/Gemini_Generated_Image_qrvtixqrvtixqrvt-Photoroom-mobile.jpg') !important;
+  }
+}
+
 @media (max-width: 991px) {
   body:has(#carousel-0900) .u-section-11 .u-sheet-1 {
     min-height: 0 !important;
@@ -566,6 +609,10 @@ body:has(#carousel-0900) #block-18 {
 
 .promo-copy .u-text-10 {
   margin: 18px 0 0;
+}
+
+html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .mission-list-mobile {
+  display: none;
 }
 
 @media (max-width: 767px) {
@@ -1801,13 +1848,6 @@ body:has(#carousel-0900) #block-18 {
     margin: 0 !important;
   }
 
-  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-backstage-hidden {
-    visibility: visible !important;
-    opacity: 1 !important;
-    transform: none !important;
-    animation: none !important;
-  }
-
   html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-text-3,
   html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-text-5,
   html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-3,
@@ -1866,9 +1906,10 @@ body:has(#carousel-0900) #block-18 {
 
   html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-2 .u-image-1 {
     display: block;
-    width: 100% !important;
+    width: calc(100% + 32px) !important;
+    max-width: none !important;
     height: auto !important;
-    margin: 0 auto !important;
+    margin: 0 -16px !important;
   }
 
   html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-wrap-1 {
@@ -1924,6 +1965,9 @@ body:has(#carousel-0900) #block-18 {
   html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-14,
   html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-16 {
     margin: 0 !important;
+    width: 100% !important;
+    max-width: 100%;
+    box-sizing: border-box;
     font-size: 0.95rem;
     line-height: 1.3;
   }
@@ -1937,6 +1981,9 @@ body:has(#carousel-0900) #block-18 {
   html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-15,
   html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-17 {
     margin: 6px 0 0 !important;
+    width: 100% !important;
+    max-width: 100%;
+    box-sizing: border-box;
     font-size: 0.78rem;
     line-height: 1.35;
   }
@@ -1956,10 +2003,19 @@ body:has(#carousel-0900) #block-18 {
     animation: none !important;
   }
 
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-2 .customAnimationOut,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .customAnimationOut,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .customAnimationOut {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
   html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-group-1 {
     width: 100% !important;
     min-height: 0 !important;
-    margin: 0 !important;
+    margin: 0 auto !important;
   }
 
   html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-4 .u-container-layout-1 {
@@ -2141,6 +2197,14 @@ body:has(#carousel-0900) #block-18 {
     margin: 8px 0 0 !important;
     font-size: 0.82rem;
     line-height: 1.4;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-text-2,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-text-4,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-text-6,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-text-8 {
+    font-size: clamp(1.2rem, 5.4vw, 1.3rem);
+    line-height: 1.2;
   }
 
   html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-backstage-hidden,
@@ -2340,7 +2404,10 @@ body:has(#carousel-0900) #block-18 {
   }
 
   html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-image-1 {
-    min-height: clamp(180px, 58vw, 240px) !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 901 / 1501;
+    background-size: 100% 100%;
     border-radius: 20px;
   }
 
@@ -2488,6 +2555,89 @@ body:has(#carousel-0900) #block-18 {
   html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-container-layout-7 {
     padding: 14px 8px !important;
   }
+}
+
+@media (max-width: 767px) {
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-text-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-text-2,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-text-1 {
+    text-align: center !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-text-1 {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-container-layout-1 {
+    padding: 0 18px !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-container-layout-3 {
+    padding: 0 18px 18px !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-text-2,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-text-3 {
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-layout-wrap-1 > .u-layout > .u-layout-row {
+    gap: 14px;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-image-1 {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-text-5 {
+    display: none;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .mission-list-mobile {
+    display: grid;
+    gap: 16px;
+    margin: 14px 0 0;
+    padding: 0;
+    color: inherit;
+    font-family: "DM Sans";
+    font-size: 0.95rem;
+    line-height: 1.55;
+    list-style: none;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .mission-list-mobile li {
+    display: grid;
+    grid-template-columns: 22px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .mission-list-mobile img {
+    width: 22px;
+    height: 30px;
+    object-fit: contain;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-backstage-hidden {
+    visibility: visible !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 [data-animation-name] {
+    animation-duration: 500ms !important;
+    animation-delay: 0ms !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-container-layout-3 {
+    padding: 18px !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-text-5 {
+    margin-top: 12px !important;
+    line-height: 1.6;
+  }
+
 }
 
 body:has(#carousel-0900) {
@@ -2648,11 +2798,24 @@ body:has(#carousel-0900) .u-section-10 #carousel-32d8 .u-carousel-control {
     width: calc(100% - 32px) !important;
   }
 
+  body:has(#carousel-0900) #carousel-0900 {
+    width: calc(100% - 32px) !important;
+    max-width: 1320px;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
   body:has(#carousel-0900) #carousel-0900 .u-carousel-inner,
   body:has(#carousel-0900) #carousel-0900 .u-carousel-item {
-    height: clamp(460px, 70vh, 620px);
-    height: clamp(460px, 70svh, 620px);
-    min-height: 460px;
+    height: clamp(420px, 70vh, 560px);
+    height: clamp(420px, 70svh, 560px);
+    min-height: 420px;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-item {
+    transition-duration: 350ms !important;
   }
 
   body:has(#carousel-0900) #carousel-0900 .u-sheet-1 {
@@ -2752,9 +2915,9 @@ body:has(#carousel-0900) .u-section-10 #carousel-32d8 .u-carousel-control {
 
   body:has(#carousel-0900) #carousel-0900 .u-carousel-inner,
   body:has(#carousel-0900) #carousel-0900 .u-carousel-item {
-    height: clamp(500px, 82vh, 640px);
-    height: clamp(500px, 82svh, 640px);
-    min-height: 500px;
+    height: clamp(420px, 70vh, 560px);
+    height: clamp(420px, 70svh, 560px);
+    min-height: 420px;
   }
 
   body:has(#carousel-0900) #carousel-0900 .u-container-layout-1 {
@@ -2844,6 +3007,12 @@ body:has(#carousel-0900) .u-section-5 .u-text-3 {
 }
 
 @media (max-width: 767px) {
+  body:has(#carousel-0900) .u-section-5 .u-group-1 {
+    width: calc(100% - 32px) !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
   body:has(#carousel-0900) .u-section-5 .u-layout-wrap-1 {
     width: calc(100% - 32px) !important;
   }
@@ -3047,5 +3216,1267 @@ body:has(#carousel-0900) .u-section-5 .u-text-3 {
     line-height: 1.25;
     text-align: center;
     text-wrap: balance;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  body:has(#carousel-0900) #carousel-0900 {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    border-radius: 0;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-inner,
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-item {
+    height: clamp(420px, 64svh, 600px) !important;
+    min-height: 420px !important;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-item {
+    position: relative;
+    background-image: none !important;
+    background-position: center center;
+    background-size: cover;
+    transition-duration: 220ms !important;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .hero-mobile-image {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-sheet-1 {
+    position: relative;
+    z-index: 1;
+    width: calc(100% - 40px) !important;
+    align-items: flex-end;
+    padding: 24px 0 32px;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-group-1 {
+    width: min(560px, 66%) !important;
+    margin: 0 !important;
+    border-radius: 22px;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-container-layout-1 {
+    padding: clamp(22px, 3vw, 32px) !important;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-text-1 {
+    font-size: clamp(1.7rem, 3.2vw, 2.25rem) !important;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-text-2 {
+    margin-top: 12px !important;
+    font-size: clamp(0.9rem, 1.5vw, 1rem) !important;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-btn-1 {
+    margin-top: 14px !important;
+    padding: 11px 20px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body:has(#carousel-0900) #carousel-0900 {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    border-radius: 0;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-inner {
+    overflow: hidden;
+    max-width: 100% !important;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-inner,
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-item {
+    height: clamp(360px, 96vw, 400px) !important;
+    min-height: 360px !important;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-item {
+    position: relative;
+    background-image: none !important;
+    transition: none !important;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .hero-mobile-image {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-sheet-1 {
+    position: relative;
+    z-index: 1;
+    width: calc(100% - 32px) !important;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 16px 0 18px;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-group-1 {
+    width: min(78%, 300px) !important;
+    margin: 0 !important;
+    border-radius: 16px;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-container-layout-1 {
+    padding: clamp(12px, 3.5vw, 16px) !important;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-text-1 {
+    font-size: clamp(1.05rem, 4.6vw, 1.2rem) !important;
+    line-height: 1.15;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-text-2 {
+    margin-top: 8px !important;
+    font-size: clamp(0.68rem, 3vw, 0.75rem) !important;
+    line-height: 1.35;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-btn-1 {
+    min-height: 34px;
+    margin-top: 8px !important;
+    padding: 8px 14px !important;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-control {
+    display: flex !important;
+    top: 50% !important;
+    bottom: auto !important;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    color: #21438b !important;
+    transform: translateY(-50%);
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-control-prev {
+    left: 10px;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-control-next {
+    right: 10px;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-control > span,
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-control svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  body:has(#carousel-0900) #carousel-0900 .u-carousel-indicators {
+    display: none !important;
+  }
+
+  body:has(#carousel-0900) .u-section-10 #carousel-32d8 .u-carousel-control-1,
+  body:has(#carousel-0900) .u-section-10 #carousel-32d8 .u-carousel-control-2 {
+    position: absolute !important;
+    display: flex !important;
+    top: 50% !important;
+    bottom: auto !important;
+    width: 36px !important;
+    height: 36px !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92) !important;
+    color: #21438b !important;
+    transform: translateY(-50%);
+  }
+
+  body:has(#carousel-0900) .u-section-10 #carousel-32d8 .u-carousel-control-1 {
+    left: 8px !important;
+  }
+
+  body:has(#carousel-0900) .u-section-10 #carousel-32d8 .u-carousel-control-2 {
+    right: 8px !important;
+  }
+
+  body:has(#carousel-0900) .u-section-10 #carousel-32d8 .u-carousel-control svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  body:has(#carousel-0900) .u-section-10 #carousel-32d8 .u-carousel-indicators {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-2 .u-sheet-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-sheet-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-4 .u-sheet-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-sheet-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-sheet-1 {
+    width: 100% !important;
+    min-height: 0 !important;
+    padding: 28px 16px;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-2 .u-layout-wrap-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-layout-wrap-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-4 .u-layout-wrap-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-layout-wrap-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-layout-wrap-1 {
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-2 .u-layout-row,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-layout-row,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-4 .u-layout-row,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-layout-row {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-2 .u-layout-cell-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-2 .u-layout-cell-3 {
+    width: 100% !important;
+    min-height: 0 !important;
+    flex: 0 0 auto !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-2 .u-layout-cell-2,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-layout-cell-8 {
+    display: none !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-2 .u-text-1 {
+    width: auto !important;
+    margin: 0 !important;
+    font-size: clamp(1.75rem, 7vw, 2.25rem) !important;
+    line-height: 1.2;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-2 .u-text-2 {
+    margin: 0 !important;
+    line-height: 1.6;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-text-1 {
+    width: auto !important;
+    margin: 0 0 20px !important;
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-layout-cell:not(.u-layout-cell-8),
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-layout-cell {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 0 !important;
+    flex: 0 0 auto !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-layout-cell:not(.u-layout-cell-8) > [class*="u-container-layout-"],
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-layout-cell > [class*="u-container-layout-"] {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 14px !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-layout-cell:not(.u-layout-cell-8) > .u-container-layout img,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-layout-cell > .u-container-layout img {
+    width: 80px !important;
+    height: 80px !important;
+    margin: 0 auto 12px !important;
+    object-fit: contain;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-group,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-group {
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-group [class*="u-container-layout-"],
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-group [class*="u-container-layout-"] {
+    padding: 16px !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-group .u-text,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-group .u-text {
+    max-width: 100% !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-group .u-text:nth-child(1),
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-group .u-text:nth-child(1) {
+    margin: 0 !important;
+    font-size: clamp(1.2rem, 5vw, 1.4rem);
+    line-height: 1.25;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-group p,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-group p {
+    margin: 8px 0 0 !important;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-4 .u-layout-cell-1 {
+    width: 100% !important;
+    min-height: 0 !important;
+    flex: 0 0 auto !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-4 .u-container-layout-1 {
+    padding: 20px 16px !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-btn-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-btn-2,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-btn-3,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-btn-4 {
+    display: block;
+    width: fit-content;
+    margin: 16px auto 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-layout-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    align-items: center;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-layout-cell {
+    width: 100% !important;
+    min-height: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-layout-cell-5 {
+    grid-column: 1 / -1;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 [class*="u-container-layout-"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    padding: 10px !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-image-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-image-2,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-image-3,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-image-4,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-image-5 {
+    width: min(170px, 100%) !important;
+    height: 70px !important;
+    margin: auto !important;
+    object-fit: contain;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-backstage-hidden,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-backstage-hidden,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-backstage-hidden,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .customAnimationOut,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .customAnimationOut,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .customAnimationOut {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-4 .u-custom-html-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-4 .u-custom-html-1 {
+    min-height: 0 !important;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-col > .u-size-60 > .u-layout-row {
+    grid-template-columns: 1fr;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-2 .u-sheet-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-sheet-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-4 .u-sheet-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-sheet-1 {
+    width: 100% !important;
+    min-height: 0 !important;
+    padding: 28px 16px;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-2 .u-layout-wrap-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-layout-wrap-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-layout-wrap-1 {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-2 .u-layout-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-2 .u-layout-cell-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-2 .u-layout-cell-3 {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 0 !important;
+    flex: 0 0 auto !important;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-2 .u-layout-cell-2 {
+    display: none !important;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-2 .u-text-1 {
+    width: auto !important;
+    margin: 0 !important;
+    font-size: clamp(1.75rem, 7vw, 2.25rem) !important;
+    line-height: 1.2;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-2 .u-text-2 {
+    margin: 0 !important;
+    line-height: 1.6;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-text-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-text-1 {
+    width: auto !important;
+    margin: 0 0 20px !important;
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-layout-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-layout-cell-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-layout-cell-2 {
+    width: 100% !important;
+    min-height: 0 !important;
+    flex: 0 0 auto !important;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-container-layout-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-container-layout-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 14px !important;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-image-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-image-2 {
+    width: 80px !important;
+    height: 80px !important;
+    margin: 0 auto 12px !important;
+    object-fit: contain;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-group-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-group-2 {
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-container-layout-2,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-container-layout-4 {
+    padding: 16px !important;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-text-2,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-text-4 {
+    margin: 0 !important;
+    font-size: clamp(1.2rem, 5vw, 1.4rem);
+    line-height: 1.25;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-text-3,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-text-5 {
+    margin: 8px 0 0 !important;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-4 .u-custom-html-1 {
+    min-height: 0 !important;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-4 .simulator-container {
+    padding: 18px !important;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-layout-row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-layout-cell {
+    width: 100% !important;
+    min-height: 0 !important;
+    flex: 0 0 auto !important;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-container-layout-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-container-layout-3,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-container-layout-5 {
+    padding: 14px !important;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-group-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-group-2,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-group-3 {
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 12px 0 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-container-layout-2,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-container-layout-4,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-container-layout-6 {
+    padding: 16px !important;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-text-2,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-text-4,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-text-6 {
+    width: auto !important;
+    margin: 0 !important;
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-text-3,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-text-5,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-text-7 {
+    width: auto !important;
+    margin: 8px 0 0 !important;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-btn-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-btn-2,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-btn-3 {
+    display: block;
+    width: fit-content;
+    margin: 16px auto 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-backstage-hidden,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-backstage-hidden,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .customAnimationOut,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .customAnimationOut {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-2 .u-sheet-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-sheet-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-4 .u-sheet-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-sheet-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-sheet-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-2 .u-sheet-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-sheet-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-4 .u-sheet-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-sheet-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-2 .u-sheet-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-sheet-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-4 .u-sheet-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-sheet-1 {
+    width: 100% !important;
+    min-height: 0 !important;
+    padding: 32px 24px;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-2 .u-layout-wrap-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-layout-wrap-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-4 .u-layout-wrap-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-layout-wrap-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-layout-wrap-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-2 .u-layout-wrap-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-wrap-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-wrap-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-2 .u-layout-wrap-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-layout-wrap-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-layout-wrap-1 {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-2 .u-layout-row,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-2 .u-layout-row,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-2 .u-layout-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-2 .u-layout-cell-2,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-2 .u-layout-cell-2,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-2 .u-layout-cell-2 {
+    display: none !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-2 .u-layout-cell-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-2 .u-layout-cell-3,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-2 .u-layout-cell-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-2 .u-layout-cell-3,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-2 .u-layout-cell-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-2 .u-layout-cell-3 {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 0 !important;
+    flex: initial !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-2 .u-text-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-2 .u-text-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-2 .u-text-1 {
+    width: auto !important;
+    margin: 0 !important;
+    font-size: clamp(1.75rem, 4vw, 2.5rem) !important;
+    line-height: 1.2;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-2 .u-text-2,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-2 .u-text-2,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-2 .u-text-2 {
+    margin: 0 !important;
+    line-height: 1.6;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-text-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-text-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-text-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-text-1 {
+    width: auto !important;
+    margin: 0 0 20px !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-layout-row,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-layout-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-col > .u-size-60 > .u-layout-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-layout-cell:not(.u-layout-cell-8),
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-cell-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-cell-2,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-cell-3,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-cell-4,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-layout-cell-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-layout-cell-2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    flex: 0 0 auto !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-layout-cell-8 {
+    display: none !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-layout-cell:not(.u-layout-cell-8) > [class*="u-container-layout-"],
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 [class*="u-container-layout-"] {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-layout-cell:not(.u-layout-cell-8) > .u-container-layout img,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-image-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-image-2 {
+    width: 80px !important;
+    height: 80px !important;
+    margin: 0 auto 12px !important;
+    object-fit: contain;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-group,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-group-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-group-2 {
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-group [class*="u-container-layout-"],
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-group [class*="u-container-layout-"] {
+    padding: 16px !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-3 .u-backstage-hidden,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-backstage-hidden,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-backstage-hidden,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-backstage-hidden,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-backstage-hidden,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-backstage-hidden,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-backstage-hidden {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-4 .u-custom-html-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-4 .u-custom-html-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-4 .u-custom-html-1 {
+    min-height: 0 !important;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-row,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-layout-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-layout-cell,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-cell-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-cell-2,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-cell-3,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-5 .u-layout-cell-4 {
+    width: auto !important;
+    max-width: 100% !important;
+    min-height: 0 !important;
+    flex: initial !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-layout-cell > [class*="u-container-layout-"] {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-group {
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 12px 0 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-image-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-image-2,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-image-3,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-image-4 {
+    width: 80px !important;
+    height: 80px !important;
+    margin: 0 auto 12px !important;
+    object-fit: contain;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-group {
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-btn-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-btn-2,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-btn-3,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-5 .u-btn-4 {
+    display: block;
+    width: fit-content;
+    margin: 16px auto 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-layout-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    align-items: center;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-layout-cell {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 0 !important;
+    flex: initial !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-layout-cell-5 {
+    grid-column: 1 / -1;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 [class*="u-container-layout-"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    padding: 12px !important;
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-image-1,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-image-2,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-image-3,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-image-4,
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-image-5 {
+    width: min(190px, 100%) !important;
+    height: 80px !important;
+    margin: auto !important;
+    object-fit: contain;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-cell-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-cell-2,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-cell-3,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-layout-cell-4 {
+    width: 100% !important;
+    min-height: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-group-1,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-group-2,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-group-3,
+  html:has(link[href*="LAYANAN-kredit.css"]) .u-section-3 .u-group-4 {
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 12px 0 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-layout-cell-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-3 .u-layout-cell-2 {
+    width: 100% !important;
+    min-height: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-4 .simulator-container {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+    gap: 20px;
+    padding: 24px !important;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-4 .simulator-column-left,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-4 .simulator-column-right {
+    display: block !important;
+    width: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-layout-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-layout-cell {
+    width: auto !important;
+    max-width: 100% !important;
+    min-height: 0 !important;
+    flex: initial !important;
+  }
+
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-group-1,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-group-2,
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-group-3 {
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 12px 0 0 !important;
+  }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-layout-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  html:has(link[href*="LAYANAN-tabungan.css"]) .u-section-6 .u-layout-cell-5 {
+    grid-column: auto;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  html:has(link[href*="LAYANAN-deposito.css"]) .u-section-5 .u-layout-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-sheet-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-sheet-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-sheet-1 {
+    width: 100% !important;
+    min-height: 0 !important;
+    padding: 36px 24px;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-layout-wrap-1 {
+    width: 100% !important;
+    margin: 32px 0 0 !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-layout-row {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 24px;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-layout-cell-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-layout-cell-3 {
+    width: auto !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    flex: initial !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-layout-cell-2 {
+    display: none !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-container-layout-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-container-layout-3 {
+    padding: 0 !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-text-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-text-1 {
+    width: auto !important;
+    margin: 0 0 24px !important;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    line-height: 1.2;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-text-2 {
+    width: auto !important;
+    margin: 0 !important;
+    font-size: clamp(1.6rem, 2.7vw, 2.25rem);
+    line-height: 1.2;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-2 .u-text-3 {
+    width: auto !important;
+    margin: 0 !important;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-layout-wrap-1 {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-layout-wrap-1 > .u-layout > .u-layout-row {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    grid-template-rows: auto auto;
+    gap: 16px;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-layout-cell-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-layout-cell-2,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-layout-cell-3 {
+    width: auto !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    flex: initial !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-layout-cell-1 {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    min-height: 420px !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-layout-cell-2 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-layout-cell-3 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-container-layout-2,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-container-layout-3 {
+    padding: 24px !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-text-2,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-text-4 {
+    width: auto !important;
+    margin: 0 !important;
+    font-size: clamp(1.7rem, 2.8vw, 2.25rem);
+    line-height: 1.2;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-text-3 {
+    margin: 12px 0 0 !important;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-text-5,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-icon-1,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-icon-2,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-icon-3,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-icon-4,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .u-icon-5 {
+    display: none !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .mission-list-mobile {
+    display: grid;
+    gap: 12px;
+    margin: 14px 0 0;
+    padding: 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    list-style: none;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .mission-list-mobile li {
+    display: grid;
+    grid-template-columns: 22px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-3 .mission-list-mobile img {
+    width: 22px;
+    height: 30px;
+    object-fit: contain;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-wrap-1 {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-cell-1 {
+    min-height: 280px !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-col > .u-size-20 > .u-layout-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-cell-2,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-cell-3,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-cell-4,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-cell-5,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-cell-6,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-layout-cell-7 {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 190px !important;
+    flex: initial !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-container-layout-2,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-container-layout-3,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-container-layout-4,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-container-layout-5,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-container-layout-6,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-container-layout-7 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px !important;
+    text-align: center;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-image-2,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-image-3,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-image-4,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-image-5,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-image-6,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-image-7 {
+    width: 64px !important;
+    height: 64px !important;
+    margin: 0 0 10px !important;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-4,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-6,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-8,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-10,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-12,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-14 {
+    width: auto !important;
+    margin: 0 !important;
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-5,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-7,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-9,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-11,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-13,
+  html:has(link[href*="TENTANG-sjrh-visimisi-nilai.css"]) .u-section-4 .u-text-15 {
+    width: auto !important;
+    margin: 8px 0 0 !important;
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-2 .u-sheet-1 {
+    min-height: 0 !important;
+    padding: 64px 24px;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-2 .u-text-1 {
+    width: auto !important;
+    margin: 0 auto 24px !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-2 .u-image-1 {
+    display: block;
+    width: 100% !important;
+    max-width: 1120px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    object-fit: contain;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-sheet-1 {
+    min-height: 0 !important;
+    padding: 40px 24px;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-1 {
+    width: auto !important;
+    margin: 0 0 28px !important;
+    text-align: center;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-wrap-1 {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-cell-1,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-cell-2,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-cell-3,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-cell-4,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-cell-5,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-cell-6,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-cell-7,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-cell-8 {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    flex: initial !important;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 [class*="u-container-layout-"] {
+    padding: 20px !important;
+    text-align: center;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-image-1,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-image-2,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-image-3,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-image-4,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-image-5,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-image-6,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-image-7,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-image-8 {
+    display: block;
+    width: 80px !important;
+    height: 80px !important;
+    margin: 0 auto 12px !important;
+    object-fit: contain;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-2,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-4,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-6,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-8,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-10,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-12,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-14,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-16 {
+    width: 100% !important;
+    max-width: 100%;
+    margin: 0 !important;
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-3,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-5,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-7,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-9,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-11,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-13,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-15,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-text-17 {
+    width: 100% !important;
+    max-width: 100%;
+    margin: 8px 0 0 !important;
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-backstage-hidden,
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .customAnimationOut {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  html:has(link[href*="TENTANG-strktr-mrkt-awrd.css"]) .u-section-3 .u-layout-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }

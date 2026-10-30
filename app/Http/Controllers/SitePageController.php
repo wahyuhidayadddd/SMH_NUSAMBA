@@ -22,7 +22,7 @@ class SitePageController extends Controller
 
     private function renderPage(string $path): Response
     {
-        $sourcePath = CmsPageSource::liveSourcePathFor($path);
+        $sourcePath = CmsPageSource::sourcePathForPage($path);
 
         if ($sourcePath !== null) {
             $content = CmsPageSource::read($sourcePath);

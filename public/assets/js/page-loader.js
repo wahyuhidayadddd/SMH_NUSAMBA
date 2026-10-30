@@ -21,6 +21,12 @@
 
   if (document.readyState === 'complete') {
     removeLoader();
+  } else if (window.matchMedia('(max-width: 1024px), (pointer: coarse)').matches) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', removeLoader, { once: true });
+    } else {
+      removeLoader();
+    }
   } else {
     window.addEventListener('load', removeLoader, { once: true });
   }

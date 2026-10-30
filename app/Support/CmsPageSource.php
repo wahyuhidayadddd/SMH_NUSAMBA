@@ -16,6 +16,11 @@ class CmsPageSource
         return is_string($sourcePath) ? $sourcePath : null;
     }
 
+    public static function sourcePathForPage(string $pagePath): ?string
+    {
+        return self::liveSourcePathFor($pagePath) ?? self::sourcePathFor($pagePath);
+    }
+
     public static function sourcePathFor(string $pagePath): ?string
     {
         $sourcePath = array_search($pagePath, config('cms-pages.source_paths', []), true);
@@ -34,7 +39,11 @@ class CmsPageSource
             throw new RuntimeException('Sumber halaman tidak ditemukan: '.$sourcePath);
         }
 
-        if ($file === false || ! str_starts_with($file, $directory.DIRECTORY_SEPARATOR)) {
+        if ($file === false) {
+            abort(404, 'Sumber halaman tidak ditemukan.');
+        }
+
+        if (! str_starts_with($file, $directory.DIRECTORY_SEPARATOR)) {
             throw new RuntimeException('Lokasi sumber halaman tidak valid: '.$sourcePath);
         }
 
